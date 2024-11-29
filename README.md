@@ -1,2 +1,3 @@
 # GameSeeker
 Videójáték kereső oldal
+-----------
