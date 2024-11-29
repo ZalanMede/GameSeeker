@@ -1,0 +1,2 @@
+# GameSeeker
+Videójáték kereső oldal
