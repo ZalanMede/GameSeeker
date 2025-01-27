@@ -1,0 +1,13 @@
+/* Univerzális CSS, ez minden oldalon megjelenik és ismétlődő elemekért felel */
+
+.circle{
+    float: right;
+    margin: 2.5%;
+    height: 50px;
+    width: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 0px;
+}
