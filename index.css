@@ -10,7 +10,10 @@ body{
     margin-top: 20%;
     border-radius: 25px;
 }
-.search-bar p{
+.search-bar img{
     float: right;
     margin: 0 auto;
+    width: 7%;
+    height: auto;
+    padding: 4px;
 }
