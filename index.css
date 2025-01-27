@@ -1,3 +1,19 @@
-html{
-    background: linear-gradient(#4152BA, #1A0935);
+body{
+    background-image: linear-gradient(rgb(65, 82, 186), rgb(26, 9, 53));
+    height: 1500px;
+}
+.search-bar{
+    width: 45%;
+    height: 3%;
+    background-color: #30FFC9;
+    margin: 0 auto;
+    margin-top: 20%;
+    border-radius: 25px;
+}
+.search-bar img{
+    float: right;
+    margin: 0 auto;
+    width: 7%;
+    height: auto;
+    padding: 4px;
 }
