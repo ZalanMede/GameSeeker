@@ -1,0 +1,53 @@
+/* Univerzális CSS, ez minden oldalon megjelenik és ismétlődő elemekért felel */
+
+html{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.circle{
+    float: right;
+    margin: 2.5%;
+    height: 50px;
+    width: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 0px;
+    position: fixed;
+    bottom: 1px;
+    right: 1px;
+}
+
+/* Header dolgok */
+
+header{
+    background-color: #1A0935;
+    padding: 1%;
+    margin: 0;
+    height: 7vh;
+    width: auto;    
+}
+
+#headerLeft{
+    float: left;
+}
+
+#headerRight{
+    float: right;
+    width: 50%;
+
+}
+
+.navGombok{
+    margin: 1vw 1vh;
+    padding: 2% 10%;
+    background-color: #1CB3C4;
+}
