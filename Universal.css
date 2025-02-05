@@ -1,6 +1,13 @@
 /* Univerzális CSS, ez minden oldalon megjelenik és ismétlődő elemekért felel */
 
+/*Betütípus*/
+@font-face {
+    font-family: 'pixeloid';
+    src: url(FONT/pixeloidsans-mlxmm-webfont.woff);
+}
+
 html{
+    font-family: 'pixeloid';
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;

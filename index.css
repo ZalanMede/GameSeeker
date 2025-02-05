@@ -50,7 +50,7 @@ body{
     .div3 { grid-area: 3 / 18 / 5 / 21; }
     .div4 { grid-area: 5 / 18 / 7 / 21; }
     
-    .jobboldali-gombok{
-        height: 50%;
-        width: auto;
-    }
+.div2 { 
+    width: 300px;
+    height: auto;
+}
