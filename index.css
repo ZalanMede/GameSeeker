@@ -13,7 +13,7 @@ body{
 .search-bar img{
     float: right;
     margin: 0 auto;
-    width: 40px;
+    width: 45px;
     height: auto;
     margin-top: -30px;
     padding-right: 9px;
@@ -29,6 +29,10 @@ body{
     border: none;
     text-align: center;
     margin-top: -200px;
+
+}
+.mid{
+    margin-top: 250px;
 }
 
 
@@ -38,6 +42,7 @@ body{
     grid-template-rows: repeat(6, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    margin-left: 50px;
     }
     
     .div1 { grid-area: 1 / 1 / 8 / 18; }
@@ -45,3 +50,7 @@ body{
     .div3 { grid-area: 3 / 18 / 5 / 21; }
     .div4 { grid-area: 5 / 18 / 7 / 21; }
     
+    .jobboldali-gombok{
+        height: 50%;
+        width: auto;
+    }
