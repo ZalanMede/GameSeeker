@@ -24,13 +24,17 @@ body {
 }
 
 #filterek label{
-    width: 50%;
+    width: 55%;
     margin: 0 auto;
     margin-bottom: 9%;
 }
 
-#filterek p{
+#filterek label{
     padding-left: 2%;
+}
+
+.nagy_filter{
+  height: 50%;
 }
 
 .container {
@@ -60,9 +64,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: 100%;
+    width: 15%;
     background-color: #FFCF6B;
+    left: 110%;
   }
   
   /* On mouse-over, add a grey background color */
