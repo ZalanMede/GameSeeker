@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body{
     background: rgb(65, 82, 186);
     background: linear-gradient(180deg, rgba(65, 82, 186,1) 0%, rgba(26, 9, 53,1) 100%);
     height: 300vh;
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 .search-bar{
     width: 45%;
@@ -18,6 +23,9 @@ body{
     margin-top: -30px;
     padding-right: 9px;
     z-index: 6;
+    position: absolute;
+    left: 68%;
+    top: 36%;
 }
 #search-bar-input{
     width: 99%;
@@ -29,6 +37,11 @@ body{
     border: none;
     text-align: center;
     margin-top: -200px;
+    background-image: url(images/logo.png);
+    background-repeat: no-repeat;
+    background-size: 7.6%;
+    background-position: right 3px;
+
 
 }
 .mid{
@@ -37,33 +50,23 @@ body{
 
 
 
-
-
-.parent {
+.tuto-img-grid {
     display: grid;
-    grid-template-columns: 0.1fr repeat(10, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-    grid-column-gap: 50px;
-    grid-row-gap: 24px;
-    width: 100%;
+    grid-template-columns: 15fr repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    width: 90%;
     height: 550px;
     margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
     }
     
-    .div1 { grid-area: 1 / 2 / 12 / 9; }
-    .div2 { grid-area: 7 / 9 / 10 / 12; 
-        width: 90%;
-        height: 130%;
-    }
-    .div3 { grid-area: 4 / 9 / 7 / 12; 
-        width: 90%;
-        height: 130%;
-    }
-    .div4 { grid-area: 1 / 9 / 4 / 12; 
-        width: 90%;
-        height: 130%;
-    }
-    
+    .div1 { grid-area: 1 / 1 / 7 / 2; }
+    .div2 { grid-area: 5 / 2 / 7 / 6; }
+    .div3 { grid-area: 3 / 2 / 5 / 6; }
+    .div4 { grid-area: 1 / 2 / 3 / 6; }
     .gallery__img {
         width: 100%;
         height: 100%;
