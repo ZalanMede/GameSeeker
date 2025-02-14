@@ -19,7 +19,7 @@ body {
   width: 45%;
   height: 50px;
   margin: 0 auto;
-  margin-top: 20%;
+  margin-top: 5%;
   border-radius: 25px;
 }
 
@@ -54,10 +54,6 @@ body {
     padding-left: 2%;
 }
 
-.nagy_filter{
-  height: 50%;
-}
-
 .container {
     display: block;
     position: relative;
@@ -86,7 +82,7 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    width: 15%;
+    width: 26px;
     background-color: #FFCF6B;
     left: 110%;
   }
