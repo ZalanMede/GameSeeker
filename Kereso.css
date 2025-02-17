@@ -8,7 +8,7 @@ body {
     float: left;
     background-color: #BE2C5D;
     height: 320vh;
-    width: 25%;
+    width: 100%;
 }
 
 #filterek h2,label{
@@ -121,3 +121,17 @@ body {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1.3fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin: -10px -10px -10px 0px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 6 / 2; }
+    .div2 { grid-area: 1 / 2 / 6 / 5; }
