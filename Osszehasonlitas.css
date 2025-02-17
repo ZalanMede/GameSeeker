@@ -3,3 +3,19 @@ body{
     background: linear-gradient(180deg, rgba(236,99,93,1) 0%, rgba(255,207,107,1) 100%);
     height: 200vh;
 }
+
+
+#hasonLeft{
+    width: 40%;
+    float: left;
+}
+
+.secDiv1{
+    background: rgb(167,60,56);
+    background: linear-gradient(90deg, rgba(167,60,56,1) 0%, rgba(65,23,22,1) 100%);
+}
+
+.secDiv1 > img{
+    width: 25%;
+    height: auto;
+}
