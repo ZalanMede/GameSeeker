@@ -8,7 +8,7 @@ body {
     float: left;
     background-color: #BE2C5D;
     height: 320vh;
-    width: 25%;
+    width: 100%;
 }
 
 #filterek h2,label{
@@ -19,7 +19,7 @@ body {
   width: 45%;
   height: 50px;
   margin: 0 auto;
-  margin-top: 20%;
+  margin-top: 5%;
   border-radius: 25px;
 }
 
@@ -54,10 +54,6 @@ body {
     padding-left: 2%;
 }
 
-.nagy_filter{
-  height: 50%;
-}
-
 .container {
     display: block;
     position: relative;
@@ -86,7 +82,7 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    width: 15%;
+    width: 26px;
     background-color: #FFCF6B;
     left: 110%;
   }
@@ -125,3 +121,17 @@ body {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1.3fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin: -10px -10px -10px 0px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 6 / 2; }
+    .div2 { grid-area: 1 / 2 / 6 / 5; }

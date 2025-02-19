@@ -1,5 +1,5 @@
 /* Univerzális CSS, ez minden oldalon megjelenik és ismétlődő elemekért felel */
-
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 /*Betütípus*/
 
 html{
@@ -12,6 +12,9 @@ html{
 body{
     margin: 0;
     padding: 0;
+    font-family: "Jersey 10", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Legörgető gomb */
@@ -47,7 +50,7 @@ header{
     justify-content: center;
     align-items: center;
     line-height: 0px;
-    font-size: 110%;
+    font-size: 165%;
     text-decoration: none;
     color: black;
 }
