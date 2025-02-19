@@ -4,18 +4,40 @@ body{
     height: 200vh;
 }
 
-
 #hasonLeft{
     width: 40%;
     float: left;
+    margin: 2.5%;
 }
 
 .secDiv1{
     background: rgb(167,60,56);
     background: linear-gradient(90deg, rgba(167,60,56,1) 0%, rgba(65,23,22,1) 100%);
+    padding: 5vh 5vw;
 }
 
 .secDiv1 > img{
-    width: 25%;
+    width: 100%;
     height: auto;
+    margin: 0 auto;
+}
+
+.sec{
+    margin: 5vh 0;
+    background: rgb(167,60,56);
+    background: linear-gradient(90deg, rgba(167,60,56,1) 0%, rgba(65,23,22,1) 100%);
+}
+
+.sec > h2, .secDiv1 > h2 {
+    color: white;
+    font-size: 2.75vw;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.sec p{
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2vw;
+    text-align: center;
 }
