@@ -1,43 +1,106 @@
 body{
     background: rgb(236,99,93);
     background: linear-gradient(180deg, rgba(236,99,93,1) 0%, rgba(255,207,107,1) 100%);
-    height: 200vh;
+    height: 100%;
+}
+
+#hasonContainer{
+    display: flex;
 }
 
 #hasonLeft{
     width: 40%;
-    float: left;
     margin: 2.5%;
 }
 
-.secDiv1{
+#hasonRight{
+    width: 40%;
+    margin: 2.5%;
+}
+
+#nyilakDiv{
+    padding-top: 10%;
+    width: 10%;
+}
+
+#nyilakDiv > p{
+    text-align: center;
+    font-size: 8vw;
+    font-weight: 900;
+}
+
+.secDiv1L{
     background: rgb(167,60,56);
     background: linear-gradient(90deg, rgba(167,60,56,1) 0%, rgba(65,23,22,1) 100%);
     padding: 5vh 5vw;
 }
 
-.secDiv1 > img{
+.secDiv1R{
+    background: rgb(29,37,84);
+    background: linear-gradient(90deg, rgba(29,37,84,1) 0%, rgba(65,82,186,1) 100%); 
+    padding: 5vh 5vw;
+}
+
+.secDiv1L > img, .secDiv1R > img{
     width: 100%;
     height: auto;
     margin: 0 auto;
 }
 
-.sec{
+.secDiv2{
+    display: flex;
+}
+
+.secDiv2 > svg{
+    padding: 2.5%;
+    width: 13%;
+    height: auto;
+}
+
+.secL{
     margin: 5vh 0;
     background: rgb(167,60,56);
     background: linear-gradient(90deg, rgba(167,60,56,1) 0%, rgba(65,23,22,1) 100%);
 }
 
-.sec > h2, .secDiv1 > h2 {
+.secR{
+    margin: 5vh 0;
+    background: rgb(29,37,84);
+    background: linear-gradient(90deg, rgba(29,37,84,1) 0%, rgba(65,82,186,1) 100%); 
+}
+
+.secL > h2, .secR > h2{
     color: white;
     font-size: 2.75vw;
     font-weight: lighter;
     text-align: center;
+    padding: 2%;
 }
 
-.sec p{
+.secDiv1L > h2, .secDiv1R > h2{
+    color: white;
+    font-size: 2.75vw;
+    font-weight: lighter;
+    text-align: left;
+}
+
+.secL p, .secR p{
     color: white;
     font-family:'Times New Roman', Times, serif;
     font-size: 2vw;
     text-align: center;
+    padding: 2%;
+}
+
+.secDiv5{
+    display: flex;
+}
+
+.secMin, .secRec{
+    width: 100%;
+}
+
+.secMin > p, .secRec > p{
+    text-align: left;
+    padding: 0 0 5% 8%;
 }
