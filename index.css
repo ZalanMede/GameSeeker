@@ -86,11 +86,12 @@ body{
             text-align: center;
             background-color: #4152BA;
             width: 15%;
-            height: 100%;
+            height: 20%;
             border-radius: 15px;
             margin: 0 auto;
-            
+            font-size: 20px;
             color: white;
+            padding-bottom: 10px;
             
         }
         .div6 { grid-area: 2 / 1 / 4 / 6; }
@@ -104,14 +105,21 @@ body{
             grid-template-rows: repeat(2, 1fr);
             grid-column-gap: 26px;
             grid-row-gap: 26px;
+            width: 90%;
+            height: auto;
+            margin: 0 auto;
             }
             
-            .div1 { grid-area: 1 / 1 / 2 / 2; }
-            .div2 { grid-area: 1 / 2 / 2 / 3; }
-            .div3 { grid-area: 1 / 3 / 2 / 4; }
-            .div4 { grid-area: 1 / 4 / 2 / 5; }
-            .div5 { grid-area: 2 / 1 / 3 / 2; }
-            .div6 { grid-area: 2 / 2 / 3 / 3; }
-            .div7 { grid-area: 2 / 3 / 3 / 4; }
-            .div8 { grid-area: 2 / 4 / 3 / 5; }
-            
+            .div8 { grid-area: 1 / 1 / 2 / 2; }
+            .div9 { grid-area: 1 / 2 / 2 / 3; }
+            .div10 { grid-area: 1 / 3 / 2 / 4; }
+            .div11 { grid-area: 1 / 4 / 2 / 5; }
+            .div12 { grid-area: 2 / 1 / 3 / 2; }
+            .div13 { grid-area: 2 / 2 / 3 / 3; }
+            .div14 { grid-area: 2 / 3 / 3 / 4; }
+            .div15 { grid-area: 2 / 4 / 3 / 5; }
+            .gallery_img2 {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
