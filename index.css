@@ -81,7 +81,9 @@ body{
             margin-top: 5%;
             text-decoration: none;
         }
-        
+        .ajanlatok-a{
+            text-decoration: none;
+        }
 
         .ajanlatok-a:hover{
             color: #1CB3C4;
@@ -92,6 +94,7 @@ body{
         }
         .ajanlatok-a:visited:hover{
             color: #1CB3C4;
+            text-decoration: none;
         }
 
         .ajanlatok-img-grid {
