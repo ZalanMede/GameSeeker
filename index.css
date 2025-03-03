@@ -3,7 +3,7 @@
 body{
     background: rgb(65, 82, 186);
     background: linear-gradient(180deg, rgba(65, 82, 186,1) 0%, rgba(26, 9, 53,1) 100%);
-    height: 300vh;
+    height: 250vh;
     font-family: "Press Start 2P", serif;
     font-weight: 400;
     font-style: normal;
@@ -15,7 +15,9 @@ body{
     margin-top: 20%;
     border-radius: 25px;
 }
-.search-bar img{
+.search-bar-logo{
+    width: 1%;
+    height: auto;
     float: right;
     margin: 0 auto;
     width: 45px;
@@ -25,7 +27,7 @@ body{
     z-index: 6;
     position: absolute;
     left: 68%;
-    top: 36%;
+    top: 35.8%;
 }
 #search-bar-input{
     width: 99%;
@@ -37,42 +39,13 @@ body{
     border: none;
     text-align: center;
     margin-top: -200px;
-    background-image: url(images/logo.png);
-    background-repeat: no-repeat;
-    background-size: 7.6%;
-    background-position: right 3px;
+
 
 
 }
 .mid{
     margin-top: 250px;
 }
-
-
-
-.tuto-img-grid {
-    display: grid;
-    grid-template-columns: 15fr repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    width: 90%;
-    height: 550px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    }
-    
-    .div1 { grid-area: 1 / 1 / 7 / 2; }
-    .div2 { grid-area: 5 / 2 / 7 / 6; }
-    .div3 { grid-area: 3 / 2 / 5 / 6; }
-    .div4 { grid-area: 1 / 2 / 3 / 6; }
-    .gallery__img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
     .ajanlatok-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -95,9 +68,34 @@ body{
             
         }
         .div6 { grid-area: 2 / 1 / 4 / 6; }
-        .div7 { grid-area: 4 / 1 / 5 / 6; }
-        
+        .div7 { grid-area: 4 / 1 / 5 / 6; 
+            text-align: center;
+            background-color: #4152BA;
+            width: 15%;
+            height: 20%;
+            border-radius: 15px;
+            margin: 0 auto;
+            font-size: 20px;
+            color: white;
+            padding-bottom: 10px;
+            margin-top: 5%;
+            text-decoration: none;
+        }
+        .ajanlatok-a{
+            text-decoration: none;
+        }
 
+        .ajanlatok-a:hover{
+            color: #1CB3C4;
+        }
+        .ajanlatok-a:visited{
+            color: white;
+            text-decoration: none;
+        }
+        .ajanlatok-a:visited:hover{
+            color: #1CB3C4;
+            text-decoration: none;
+        }
 
         .ajanlatok-img-grid {
             display: grid;
@@ -123,3 +121,38 @@ body{
                 height: 100%;
                 object-fit: cover;
             }
+
+
+
+
+            .tovabbi-grid {
+                display: grid;
+                grid-template-columns: repeat(9, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+                }
+                
+                .div16 { grid-area: 1 / 1 / 2 / 10; background-color: #30FFC9;
+                    text-align: center;
+                    background-color: #4152BA;
+                    width: 15%;
+                    height: 20%;
+                    border-radius: 15px;
+                    margin: 0 auto;
+                    font-size: 20px;
+                    color: white;
+                    padding-bottom: 10px;
+                    margin-top: 5%;
+                
+                }
+                .div17 { grid-area: 2 / 1 / 6 / 5; background-color: #30FFC9;
+                
+                }
+                .div18 { grid-area: 5 / 5 / 7 / 7; background-color: #30FFC9;}
+                .div19 { grid-area: 2 / 7 / 5 / 10; background-color: #30FFC9;}
+                .gallery_img3 {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
