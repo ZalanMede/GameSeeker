@@ -105,12 +105,12 @@ body {
   .checkmark:after {
     content: "";
     position: absolute;
-    display: none;
+    display: block;
   }
   
   /* Show the checkmark when checked */
   .container input:checked ~ .checkmark:after {
-    display: block;
+    display: none;
   }
   
   /* Style the checkmark/indicator */
