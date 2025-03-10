@@ -6,6 +6,7 @@
     <title>Könyvtár</title>
     <link rel="stylesheet" href="Konyvtar.css">
     <link rel="stylesheet" href="Universal.css">
+
 </head>
 <body>
     <header>
@@ -20,12 +21,411 @@
         <div class="navTarto" onclick="location.href='sorsolas.html';" style="cursor: pointer;">
             <a href="sorsolas.html" class="navGombok">Sorsolás</a>
         </div>
-        <div class="navTarto" onclick="location.href='Kereso.html';" style="cursor: pointer;">
-            <a href="Kereso.html" class="navGombok">Kereso</a>
+        <div class="navTarto" onclick="location.href='Konyvtar.html';" style="cursor: pointer;">
+            <a href="Konyvtar.html" class="navGombok">Könyvtár</a>
         </div>
         <div class="navTarto" onclick="location.href='index.html';" style="cursor: pointer;">
             <a href="index.html" class="navGombok">Főoldal</a>
         </div>
     </header>
+
+
+
+        <div class="parent">
+            <div class="div1"> <aside id="filterek">
+                <h2>Filterek</h2>
+                <div>
+                    <label class="container">Ingyenes<input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Együttműködő<input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Indie <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Kaland <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Könnyed <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">RPG <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Multiplayer <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Sport <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Stratégia <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Szimuláció <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Versenyzés <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Korai hozzáférés <input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Legkelendőbb <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Akciós <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Singleplayer <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Rougelike <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Demó <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">VR <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Akció <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Belső nézetes lövöldözős <input type="checkbox" checked="checked">
+                    <span class="checkmark" style="height: 50%;"></span></label>
+                    <label class="container">Hack & Slash <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Külső nézetes lövöldözős <input type="checkbox" checked="checked">
+                    <span class="checkmark" style="height: 50%;"></span></label>
+                    <label class="container">Shoot 'em up <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Platformer <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Verekedős<input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Árkád és ritmus <input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Csapatalapú <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">JRPG <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span></label>
+                    <label class="container">Körökre osztott <input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Randi <input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">DOTA <input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Sandbox és fizika <input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Építés és gépesítés <input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Űr és repülés <input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Katonai<input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Kártya és táblás<input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Anime<input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Horror<input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Nyílt világ<input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Rejtély és detektív<input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Sci-fi és cyberpunk<input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Túlélő<input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Toronyvédős<input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                    <label class="container">Hero shooter<input type="checkbox" checked="checked">
+                    <span class="checkmark" ></span></label>
+                </div>
+            </aside></div>
+            <section class="div2"> 
+                <div class="search-bar"> 
+                <input type="text" id="search-bar-input" name="search-bar-input">
+                </div>
+                <div id="results">
+                    <div class="result">
+                        <img src="./images/isaac.jpg" alt="The Binding Of Isaac" title="The Binding Of Isaac">
+                        <div id="container">
+                            <div id="cim">
+                                <p>The Binding of <br> Isaac: Rebirth</p>
+                            </div>
+                            <div id="ar">
+                                <p>14,99€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/stardew.png" alt="Stardew Valley" title="Stardew Valley">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Stardew Valley</p>
+                            </div>
+                            <div id="ar">
+                                <p>13,99€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/terraria.png" alt="Terraria" title="Terraria">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Terraria</p>
+                            </div>
+                            <div id="ar">
+                                <p>9,75€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/grand.jpg" alt="Grand Theft Auto V Enhanced" title="Grand Theft Auto V Enhanced">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Grand Theft Auto V Enhanced</p>
+                            </div>
+                            <div id="ar">
+                                <p>29,98€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/hollow.png" alt="Hollow Knight" title="Hollow Knight">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Hollow Knight</p>
+                            </div>
+                            <div id="ar">
+                                <p>14,79€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/beat.png" alt="Beat Saber" title="Beat Saber">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Beat Saber</p>
+                            </div>
+                            <div id="ar">
+                                <p>29,99€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/total.png" alt="Total Warhammer" title="Total Warhammer">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Total War: <br> WARHAMMER III</p>
+                            </div>
+                            <div id="ar">
+                                <p>59,99€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/resident.png" alt="Resident Evil 4" title="Resident Evil 4">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Resident Evil 4</p>
+                            </div>
+                            <div id="ar">
+                                <p>39,99€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/titanfall.png" alt="Titanfall 2" title="Titanfall 2">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Titanfall 2</p>
+                            </div>
+                            <div id="ar">
+                                <p>29,99€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/once.jpg" alt="Once Human" title="Once Human">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Once Human</p>
+                            </div>
+                            <div id="ar">
+                                <p>FREE</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/sid.jpg" alt="Sid Meier's Civilization VII" title="Sid Meier's Civilization VII">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Sid Meier's <br> Civilization VII</p>
+                            </div>
+                            <div id="ar">
+                                <p>69,99€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/marvel.jpg" alt="MARVEL SNAP" title="MARVEL SNAP">
+                        <div id="container">
+                            <div id="cim">
+                                <p>MARVEL SNAP</p>
+                            </div>
+                            <div id="ar">
+                                <p>FREE</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/middle.jpg" alt="Middle-earth: Shadow of War" title="Middle-earth: Shadow of War">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Middle-earth: Shadow of War</p>
+                            </div>
+                            <div id="ar">
+                                <p>39,99€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/monster.jpg" alt="Monster Hunter Wilds" title="Monster Hunter Wilds">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Monster Hunter <br> Wilds</p>
+                            </div>
+                            <div id="ar">
+                                <p>69,99€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/Balatro.png" alt="Balatro" title="Balatro">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Balatro</p>
+                            </div>
+                            <div id="ar">
+                                <p>13,99€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/heroes.jpg" alt="Heroes of Hammerwatch II" title="Heroes of Hammerwatch II">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Heroes of Hammerwatch II</p>
+                            </div>
+                            <div id="ar">
+                                <p>17,49€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/miside.jpg" alt="MiSide" title="MiSide">
+                        <div id="container">
+                            <div id="cim">
+                                <p>MiSide</p>
+                            </div>
+                            <div id="ar">
+                                <p>17,49€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/lethal.jpg" alt="Lethal Company" title="Lethal Company">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Lethal Company</p>
+                            </div>
+                            <div id="ar">
+                                <p>9,75€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/satisfactory.jpg" alt="Satisfactory" title="Satisfactory">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Satisfactory</p>
+                            </div>
+                            <div id="ar">
+                                <p>38,99€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/vellum.jpg" alt="Vellum" title="Vellum">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Vellum</p>
+                            </div>
+                            <div id="ar">
+                                <p>19,50€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/dying.jpg" alt="Dying Light 2 Stay Human: Reloaded Edition" title="Dying Light 2 Stay Human: Reloaded Edition">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Dying Light 2 Stay Human</p>
+                            </div>
+                            <div id="ar">
+                                <p>59,99€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/phoenotopia.jpg" alt="Phoenotopia: Awakening" title="Phoenotopia: Awakening">
+                        <div id="container">
+                            <div id="cim">
+                                <p>Phoenotopia: Awakening</p>
+                            </div>
+                            <div id="ar">
+                                <p>17,99€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/world.jpg" alt="World of Warships" title="World of Warships">
+                        <div id="container">
+                            <div id="cim">
+                                <p>World of Warships</p>
+                            </div>
+                            <div id="ar">
+                                <p>FREE</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <img src="./images/planet.jpg" alt="The Planet Crafter" title="The Planet Crafter">
+                        <div id="container">
+                            <div id="cim">
+                                <p>The Planet Crafter</p>
+                            </div>
+                            <div id="ar">
+                                <p>23,99€</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+    
+    <footer>
+        <button class="circle" onclick="scrollToTop()">▲</button>
+    </footer>
+
+    <script src="UniversalScript.js"></script>
 </body>
 </html>
