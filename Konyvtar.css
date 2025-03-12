@@ -16,7 +16,7 @@ body {
 }
 
 .search-bar{
-  width: 45%;
+  width: 65%;
   height: 50px;
   margin: 0 auto;
   margin-top: 5%;
@@ -33,8 +33,6 @@ body {
   border: none;
   text-align: center;
   margin-top: -200px;
-    font-size: 20pt;
-    
 }
 
 #filterek h2{

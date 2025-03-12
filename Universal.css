@@ -10,6 +10,10 @@ html{
     scrollbar-color: #1CB3C4 #1A0935;
     scrollbar-width: thin;
 }
+#search-bar-input{
+  font-size: 20pt;
+}
+
 
 body{
     margin: 0;
