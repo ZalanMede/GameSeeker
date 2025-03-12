@@ -25,13 +25,10 @@ body{
 
 /* Legörgető gomb */
 
-/* From Uiverse.io by vinodjangid07 */ 
-
-
-.felgorgGomb {
+#felgorgGomb {
     width: 45px;
     height: 45px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
@@ -42,30 +39,31 @@ body{
     border: none;
   }
   
-  .arrow path {
+  #arrow path {
     fill: white;
   }
   
-  .felgorgTxt {
+  #felgorgTxt {
     font-size: 1em;
-    width: 100px;
+    width: 75px;
     position: absolute;
-    color: black;
+    border-radius: 25px;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    bottom: -28px;
+    bottom: -31px;
     opacity: 0;
     transition-duration: .7s;
   }
   
-  .felgorgGomb:hover .felgorgTxt {
+  #felgorgGomb:hover #felgorgTxt {
     opacity: 1;
     transition-duration: .7s;
   }
 
 
-  .felgorgGomb:hover .arrow {
+  #felgorgGomb:hover #arrow {
     animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
 
@@ -86,7 +84,7 @@ body{
   }
   
 
-.circle:hover{
+#circle:hover{
     cursor:pointer;
 }
 
