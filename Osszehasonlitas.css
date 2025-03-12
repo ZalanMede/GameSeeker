@@ -4,6 +4,14 @@ body{
     height: 100%;
 }
 
+#felgorgGomb{
+    background: linear-gradient(#FFE5AD, #B71D15)
+}
+
+#felgorgTxt{
+    background: linear-gradient(#B71D15, #ac9a75);
+}
+
 #hasonContainer{
     display: flex;
 }
