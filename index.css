@@ -181,18 +181,19 @@ body{
 #diszgomb{
     height: 180px;
     width: auto;
-    
+    position: absolute;
 }
 
 .gombok{
     background-color: #1A0935;
     color: white;
     font-family: "Press Start 2P", serif;
-    width: 250px;
-    height: 50px;
+    width: 200px;
+    height: 80px;
     display: flex;
     margin-left: 5%;
     border: none;
+    position: relative;
 }
 
 #felso_gomb{
@@ -205,4 +206,8 @@ body{
 .gombok:hover{
     background-color: #30FFC9;
     color: black;
+}
+.gombok-p{
+    margin: 0 auto; 
+    padding-top: 30px;
 }
