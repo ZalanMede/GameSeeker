@@ -4,6 +4,15 @@ body {
     height: 100%;
 }
 
+#felgorgGomb{
+  background: linear-gradient(#18688B, #0A0614);
+  left: 1.2vw;
+}
+
+#felgorgTxt{
+  background: linear-gradient(#0A0614, #18688B);
+}
+
 #filterek{
     float: left;
     background-color: #301E6A;
