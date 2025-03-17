@@ -26,62 +26,62 @@ body{
 /* Legörgető gomb */
 
 #felgorgGomb {
-    width: 45px;
-    height: 45px;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    cursor: pointer;
-    position: fixed;
-    bottom: 2vh;
-    right: 1.2vw;
-    border: none;
-  }
+  width: 45px;
+  height: 45px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 2vh;
+  right: 1.2vw;
+  border: none;
+}
   
-  #arrow path {
-    fill: white;
-  }
+#arrow path {
+  fill: white;
+}
   
-  #felgorgTxt {
-    font-size: 1em;
-    width: 75px;
-    position: absolute;
-    border-radius: 25px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: -31px;
+#felgorgTxt {
+  font-size: 1em;
+  width: 75px;
+  position: absolute;
+  border-radius: 25px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -31px;
+  opacity: 0;
+  transition-duration: .7s;
+}
+  
+#felgorgGomb:hover #felgorgTxt {
+  opacity: 1;
+  transition-duration: .7s;
+}
+
+
+#felgorgGomb:hover #arrow {
+  animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(10px);
     opacity: 0;
-    transition-duration: .7s;
   }
   
-  #felgorgGomb:hover #felgorgTxt {
+  50% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(0);
     opacity: 1;
-    transition-duration: .7s;
   }
-
-
-  #felgorgGomb:hover #arrow {
-    animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  }
-
-  @keyframes slide-in-bottom {
-    0% {
-      transform: translateY(10px);
-      opacity: 0;
-    }
-    
-    50% {
-      transform: translateY(-3px);
-    }
-  
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+}
   
 
 #circle:hover{
