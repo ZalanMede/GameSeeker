@@ -59,7 +59,7 @@ body {
     width: 55%;
     margin: 0 auto;
     margin-bottom: 9%;
-    margin-right: 30%;
+    margin-left: 27%;
 }
 
 #filterek label{
@@ -96,7 +96,7 @@ body {
     height: 100%;
     width: 26px;
     background-color: #1CB3C4;
-    left: 110%;
+    left: -25%;
   }
   
   /* On mouse-over, add a grey background color */

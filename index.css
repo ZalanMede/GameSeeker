@@ -17,6 +17,10 @@ body{
     background: linear-gradient(#1A0935, #4152BA);
 }
 
+#gombok_div{
+    margin-top: -460px;
+}
+
 .search-bar{
     width: 45%;
     height: 50px;
@@ -130,7 +134,16 @@ body{
             width: 90%;
             height: auto;
             margin: 0 auto;
+            background-color: black;
+            padding: 10px;
+            border-radius: 12px;
             }
+        .ajanlatok-img-grid-outer-bg{
+            background-color: #4152BA;
+            padding: 10px;
+            border-radius: 12px;
+            
+        }
             
             .div8 { grid-area: 1 / 1 / 2 / 2; }
             .div9 { grid-area: 1 / 2 / 2 / 3; }
@@ -201,7 +214,7 @@ body{
     height: 80px;
     display: flex;
     margin-left: 5%;
-    border: none;
+    border: black solid;
     position: relative;
 }
 
