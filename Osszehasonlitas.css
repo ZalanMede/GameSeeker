@@ -5,11 +5,11 @@ body{
 }
 
 #felgorgGomb{
-    background: linear-gradient(#FFE5AD, #B71D15)
+    background: linear-gradient(#B71D15, #a38f63)
 }
 
 #felgorgTxt{
-    background: linear-gradient(#B71D15, #ac9a75);
+    background: linear-gradient(#a38f63, #B71D15);
 }
 
 #hasonContainer{
