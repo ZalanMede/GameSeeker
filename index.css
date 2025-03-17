@@ -17,6 +17,10 @@ body{
     background: linear-gradient(#1A0935, #4152BA);
 }
 
+#gombok_div{
+    margin-top: -460px;
+}
+
 .search-bar{
     width: 45%;
     height: 50px;
@@ -201,7 +205,7 @@ body{
     height: 80px;
     display: flex;
     margin-left: 5%;
-    border: none;
+    border: black solid;
     position: relative;
 }
 
