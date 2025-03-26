@@ -56,8 +56,21 @@ body{
 
 
 }
-.mid{
+.mid-section{
     margin-top: 280px;
+    width: 98%;
+    margin-left: 20px;
+
+    background-color: antiquewhite;
+}
+.mid-div{
+    background-color: aqua;
+    height: 903px;
+}
+.mid-div-right-img{
+    background-color: brown;
+    margin-top: -400px;
+    float: right;
 }
 #mid-section-img{
     height: 90vh;
@@ -134,7 +147,7 @@ body{
             width: 90%;
             height: auto;
             margin: 0 auto;
-            background-color: black;
+            background-color: #1A0935;
             padding: 10px;
             border-radius: 12px;
             }
@@ -142,7 +155,8 @@ body{
             background-color: #4152BA;
             padding: 10px;
             border-radius: 12px;
-            
+            width: 90%;
+            margin: 0 auto;
         }
             
             .div8 { grid-area: 1 / 1 / 2 / 2; }
