@@ -39,8 +39,8 @@ ol, li {
     counter-reset: item;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 55%;
     box-sizing: border-box;
     scrollbar-color: transparent transparent; /* thumb and track color */
     scrollbar-width: 0px;
@@ -116,8 +116,9 @@ ol, li {
 
 .carNav {
     position: relative;
-    top: 65vh;
-    margin: 0 0 0 40vw;
+    top: 70vh;
+    width: 100%;
+    text-align: center;
 }
 
 .carNavList, .carNavItem {
@@ -126,14 +127,15 @@ ol, li {
 
 .carNavButton {
     display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
     background-color: #333;
     background-clip: content-box;
     border: 0.25rem solid transparent;
     border-radius: 50%;
     font-size: 0;
     transition: transform 0.1s;
+    text-align: center;
 }
 
 .carNavButton:hover {
