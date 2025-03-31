@@ -61,16 +61,22 @@ body{
     width: 98%;
     margin-left: 20px;
 
-    background-color: antiquewhite;
+    
 }
 .mid-div{
-    background-color: aqua;
-    height: 903px;
+   
+    height: 809px;
 }
 .mid-div-right-img{
-    background-color: brown;
-    margin-top: -400px;
+    
+    
     float: right;
+
+}
+.mid-div-right-img:hover{
+    background: "images/proba kep2.png";
+    
+    opacity: 50%;
 }
 #mid-section-img{
     height: 90vh;
