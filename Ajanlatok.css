@@ -4,6 +4,18 @@ body{
     height: 200vh;
 }
 
+.navTarto{
+    background-color: #E96559;
+}
+
+.navGombok{
+    color: #fceed2;
+}
+
+#headerLeft > img{
+    background-color: #E96559;
+}
+
 #felgorgGomb{
     background: linear-gradient(#FFCF6B, #E96559);
 }
@@ -16,7 +28,7 @@ body{
 
 ol, li {
     list-style: none;
-    margin: 0;
+    margin: 5px;
     padding: 0;
 }
 
@@ -39,8 +51,25 @@ ol, li {
     counter-reset: item;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 55%;
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-width: 0px;
+}
+
+  
+.carViewPort::-webkit-scrollbar {
+    width: 0;
+}
+
+.carViewPort::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.carViewPort::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
 }
 
 .carSlide {
@@ -99,7 +128,8 @@ ol, li {
 
 .carNav {
     position: relative;
-    top: 75vh;
+    top: 70vh;
+    width: 100%;
     text-align: center;
 }
 
@@ -107,16 +137,21 @@ ol, li {
     display: inline-block;
 }
 
-.carNav-button {
+.carNavButton {
     display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
     background-color: #333;
     background-clip: content-box;
     border: 0.25rem solid transparent;
     border-radius: 50%;
     font-size: 0;
     transition: transform 0.1s;
+    text-align: center;
+}
+
+.carNavButton:hover {
+    background-color: #fff;
 }
 
 .carouselContainer::before, .carouselContainer::after, .carPrev, .carNext {
@@ -138,6 +173,25 @@ ol, li {
 .carouselContainer::after,
 .carNext {
     right: -1rem;
+}
+
+.carouselContainer::before,
+.carouselContainer::after {
+  content: '';
+  z-index: 1;
+  background-color: #333;
+  background-size: 1.5rem 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+#carSlide1, #carSlide2, #carSlide3{
+    scroll-margin-top: 30vh;
 }
 
 /* Carousel vége */

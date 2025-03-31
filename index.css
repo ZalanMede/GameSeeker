@@ -9,6 +9,18 @@ body{
     font-style: normal;
 }
 
+.navTarto{
+    background-color: #4152BA !important;
+}
+
+.navGombok{
+    color: #30FFC9 !important;
+}
+
+#headerLeft > img{
+    background-color: #4152BA !important;
+}
+
 #felgorgGomb{
     background: linear-gradient(#4152BA, #1A0935)
 }
@@ -16,6 +28,8 @@ body{
 #felgorgTxt{
     background: linear-gradient(#1A0935, #4152BA);
 }
+
+/* Oldal */
 
 #gombok_div{
     margin-top: -460px;

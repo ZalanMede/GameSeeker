@@ -6,6 +6,18 @@ body{
     font-style: normal;
 }
 
+.navTarto{
+    background-color: #BE2C5D !important;
+}
+  
+.navGombok{
+    color: #36113C !important;
+}
+
+#headerLeft > img{
+    background-color: #BE2C5D !important;
+}
+
 #felgorgGomb{
     background: linear-gradient(#E96559, #36113C)
 }
