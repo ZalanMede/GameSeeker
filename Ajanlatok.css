@@ -4,10 +4,194 @@ body{
     height: 200vh;
 }
 
+.navTarto{
+    background-color: #E96559;
+}
+
+.navGombok{
+    color: #fceed2;
+}
+
+#headerLeft > img{
+    background-color: #E96559;
+}
+
 #felgorgGomb{
     background: linear-gradient(#FFCF6B, #E96559);
 }
-  
+
 #felgorgTxt{
     background: linear-gradient(#E96559, #FFCF6B);
 }
+
+/* Carousel kód */
+
+ol, li {
+    list-style: none;
+    margin: 5px;
+    padding: 0;
+}
+
+.carouselContainer {
+    position: relative;
+    padding-top: 75%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+}
+
+.carViewPort {
+    margin: auto auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    width: 80%;
+    height: 55%;
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-width: 0px;
+}
+
+  
+.carViewPort::-webkit-scrollbar {
+    width: 0;
+}
+
+.carViewPort::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.carViewPort::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+}
+
+.carSlide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background-color: #f99;
+    counter-increment: item;
+}
+
+.carSlide:nth-child(even) {
+    background-color: #99f;
+}
+
+.carSlide:before {
+    content: counter(item);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-40%,70px);
+    color: #fff;
+    font-size: 2em;
+}
+
+.carSnapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+}
+
+@media (hover: hover) {
+    .carSnapper {
+        animation-name: tonext, snap;
+        animation-timing-function: ease;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+
+    .carSlide:last-child .carSnapper {
+        animation-name: tostart, snap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carSnapper {
+        animation-name: none;
+    }
+}
+
+.carouselContainer:hover .carSnapper, .carouselContainer:focus-within .carSnapper {
+    animation-name: none;
+}
+
+.carNav {
+    position: relative;
+    top: 70vh;
+    width: 100%;
+    text-align: center;
+}
+
+.carNavList, .carNavItem {
+    display: inline-block;
+}
+
+.carNavButton {
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: #333;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+    text-align: center;
+}
+
+.carNavButton:hover {
+    background-color: #fff;
+}
+
+.carouselContainer::before, .carouselContainer::after, .carPrev, .carNext {
+    position: absolute;
+    top: 0;
+    margin-top: 37.5%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
+}
+
+.carouselContainer::before, .carPrev {
+    left: -1rem;
+}
+  
+.carouselContainer::after,
+.carNext {
+    right: -1rem;
+}
+
+.carouselContainer::before,
+.carouselContainer::after {
+  content: '';
+  z-index: 1;
+  background-color: #333;
+  background-size: 1.5rem 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+#carSlide1, #carSlide2, #carSlide3{
+    scroll-margin-top: 30vh;
+}
+
+/* Carousel vége */

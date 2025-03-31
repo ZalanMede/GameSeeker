@@ -28,6 +28,59 @@
             <a href="index.html" class="navGombok">Főoldal</a>
         </div>
     </header>
+
+    <section id="carouselContainer">
+
+        <ol class="carViewPort">
+            <li id="carSlide1" index="0" class="carSlide">
+                <div class="carSnapper">
+                    <a href="carSlide3" class="carPrev">
+                        Go to Previous Slide
+                    </a>
+                    <a href="carSlide2" class="carNext">
+                        Go to Next Slide
+                    </a>
+                </div>
+            </li>
+
+            <li id="carSlide2" index="1" class="carSlide">
+                <div class="carSnapper">
+                    <a href="carSlide1" class="carPrev">
+                        Go to Previous Slide
+                    </a>
+                    <a href="carSlide3" class="carNext">
+                        Go to Next Slide
+                    </a>
+                </div>
+            </li>
+
+            <li id="carSlide3" index="2" class="carSlide">
+                <div class="carSnapper">
+                    <a href="carSlide2" class="carPrev">
+                        Go to Previous Slide
+                    </a>
+                    <a href="carSlide1" class="carNext">
+                        Go to Next Slide
+                    </a>
+                </div>
+            </li>
+        </ol>
+
+        <aside class="carNav">
+            <ol class="carNavList">
+                <li class="carNavItem">
+                    <a href="#carSlide1" class="carNavButton">⬤</a>
+                </li>
+                <li class="carNavItem">
+                    <a href="#carSlide2" class="carNavButton">⬤</a>
+                </li>
+                <li class="carNavItem">
+                    <a href="#carSlide3" class="carNavButton">⬤</a>
+                </li>
+            </ol>
+        </aside>
+    </section>
+
     <footer>
         <button id="felgorgGomb" onclick="scrollToTop()">
             <svg height="1.2em" id="arrow" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></svg>

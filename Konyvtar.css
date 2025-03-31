@@ -4,6 +4,18 @@ body {
     height: 100%;
 }
 
+.navTarto{
+  background-color: #301E6A !important;
+}
+
+.navGombok{
+  color: #1CB3C4 !important;
+}
+
+#headerLeft > img{
+  background-color: #301E6A !important;
+}
+
 #felgorgGomb{
   background: linear-gradient(#18688B, #0A0614);
   left: 1.2vw;

@@ -103,7 +103,7 @@ header{
     justify-content: center;
     align-items: center;
     line-height: 0px;
-    font-size: 130%;
+    font-size: 125%;
     text-decoration: none;
     color: black;
 }
@@ -123,4 +123,25 @@ header{
     border-radius: 10px;
     padding: 0.25vh;
     margin: 0.75vh 1vw;
+}
+
+.navMD{
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 0px;
+  line-height: 7px;
+  font-size: 15px;
+  color: white;
+}
+
+/* MD nézet */
+
+@media only screen and (max-width: 768px) {
+  .navGombok, .navTarto{
+    display: none;
+  }
+  .navMD{
+    display: block;
+  }
 }
