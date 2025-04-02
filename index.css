@@ -83,12 +83,12 @@ body{
 }
 .mid-div-right-img{
     
-    
+
     float: right;
 
 }
 .mid-div-right-img:hover{
-    background: "images/proba kep2.png";
+   
     
     opacity: 50%;
 }
