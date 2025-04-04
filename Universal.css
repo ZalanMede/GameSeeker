@@ -88,7 +88,7 @@ body{
     cursor:pointer;
 }
 
-/* Header dolgok */
+/* Header */
 
 header{
     background-color: #1A0935;
@@ -125,15 +125,58 @@ header{
     margin: 0.75vh 1vw;
 }
 
-.navMD{
-  display: none;
+/* Overlay */
+
+.opencloseOverlay{
   position: absolute;
-  right: 15px;
-  top: 0px;
-  line-height: 7px;
-  font-size: 15px;
-  color: white;
+  right: 2vw;
+  top: 1vh;
+  width: 35px;
+  height: 35px;
 }
+
+.opencloseOverlay > p{
+  position: relative;
+  bottom: 18.5px;
+  color: white;
+  line-height: 8px;
+  font-size: 15px;
+}
+
+#closeBTN{
+  rotate: 90deg;
+}
+
+.overlayElementsMD{
+  position: relative;
+  top: 25%;
+  width: 100%; 
+  text-align: center; 
+  margin-top: 30px;
+}
+
+#overlayMD{
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlayButton{
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
 
 /* MD nézet */
 

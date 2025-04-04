@@ -17,11 +17,11 @@ body{
 }
 
 #felgorgGomb{
-    background: linear-gradient(#B71D15, #a38f63)
+    background: linear-gradient(#B71D15, #FFCF6B)
 }
 
 #felgorgTxt{
-    background: linear-gradient(#a38f63, #B71D15);
+    background: linear-gradient(#FFCF6B, #B71D15);
 }
 
 #hasonContainer{
