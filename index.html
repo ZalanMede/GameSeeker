@@ -45,7 +45,8 @@
         <div class="mid-div"><img src="images/Group 162.svg" id="mid-section-img" alt="" >
 
             <div class="mid-div-right-img"> 
-            <img id="image-js-smth" src="images/proba kep1.png"  style="height:797px; width: 905.5px; border: 6px solid #1CB3C4; " >
+                <!--
+            <img id="image-js-smth" src="images/Ajanlatok_tutorial.png"  style="height:797px; width: 905.5px; border: 6px solid #1CB3C4; " >
             </div>
             <div id="gombok_div">
                 <button onclick="document.getElementById('image-js-smth').src='images/proba kep1.png'" class="gombok" id="felso_gomb"><p class="gombok-p">Ajánlatok</p></button>
@@ -53,9 +54,37 @@
                 <button onclick="document.getElementById('image-js-smth').src='images/proba kep3.png'" class="gombok"><p class="gombok-p">Pörgető</p> </button>
                 <button onclick="document.getElementById('image-js-smth').src='images/proba kep4.png'" class="gombok" id="also_gomb"><p class="gombok-p">Összehasonlító</p></button>
             </div>
+                -->
+
  
 
-            
+            <img id="image-js-smth" src="images/proba_kep1.png" style="height:797px; width: 905.5px; border: 6px solid #1CB3C4; " >
+
+    <div id="gombok_div">
+        <button onclick="changeImage(1)" class="gombok" id="felso_gomb"><p class="gombok-p">Ajánlatok</p></button>
+        <button onclick="changeImage(2)" class="gombok"><p class="gombok-p">Pörgető</p></button>
+        <button onclick="changeImage(3)" class="gombok"><p class="gombok-p">Összehasonlító</p> </button>
+        <button onclick="changeImage(4)" class="gombok" id="also_gomb"><p class="gombok-p">Könyvtár</p></button>
+    </div>
+
+    <script>
+        let currentImage = 1; // Alapértelmezett kép száma
+
+        function changeImage(imageNumber) {
+            currentImage = imageNumber;
+            document.getElementById('image-js-smth').src = `images/proba_kep${imageNumber}.png`;
+        }
+
+        const imgElement = document.getElementById('image-js-smth');
+
+        imgElement.addEventListener("mouseenter", function() {
+            imgElement.src = `images/proba_kep${currentImage}_tutorial.png`;
+        });
+
+        imgElement.addEventListener("mouseleave", function() {
+            imgElement.src = `images/proba_kep${currentImage}.png`;
+        });
+    </script>
 
         
 
