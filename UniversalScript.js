@@ -19,15 +19,15 @@ function OpenCloseMDMenu() {
   if (openMD)
   {
     document.getElementById("overlayMD").style.height = "0%";
-    document.getElementById("opencloseOverlay");
-    opencloseOverlay.style.animation = "quarterSpin 0.5s linear 1 backwards";
+    document.getElementById("opencloseOverlaySVG");
+    opencloseOverlaySVG.style.animation = "quarterSpinBack 0.5s linear 1 forwards";
     openMD = false;
   }
   else
   {
     document.getElementById("overlayMD").style.height = "100%";
-    document.getElementById("opencloseOverlay");
-    opencloseOverlay.style.animation = "quarterSpin 0.5s linear 1 forwards";
+    document.getElementById("opencloseOverlaySVG");
+    opencloseOverlaySVG.style.animation = "quarterSpinForw 0.5s linear 1 forwards";
     openMD = true;
   }
 }
