@@ -3,7 +3,7 @@
 body{
     background: rgb(65, 82, 186);
     background: linear-gradient(180deg, rgba(65, 82, 186,1) 0%, rgba(26, 9, 53,1) 100%);
-    height: 350vh;
+    height: 400vh;
     font-family: "Press Start 2P", serif;
     font-weight: 400;
     font-style: normal;
@@ -263,3 +263,34 @@ body{
     margin: 0 auto; 
     padding-top: 30px;
 }
+
+
+
+.bubble-tag-parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 1000px;
+
+    padding-bottom: 30px;
+    }
+    
+    .bubble1 { grid-area: 1 / 1 / 4 / 4; 
+        background-color:yellow;
+        
+    }
+    .bubble2 { grid-area: 1 / 4 / 4 / 7; background-color: whitesmoke;}
+    .bubble3 { grid-area: 4 / 3 / 7 / 6; background-color: #30FFC9;}
+    
+
+ 
+        
+
+        .bubble-img{
+            width: 150%;
+            height: 150%;
+            object-fit: cover;
+            
+        }
