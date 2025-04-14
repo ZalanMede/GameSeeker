@@ -8,6 +8,122 @@
     <style>
         </style>
     <title>GAMESEEKER</title>
+
+
+    <style>
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "bubble2 bubble1"
+        ". bubble3";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr 1fr;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+    }
+
+    .bubble {
+      position: relative;
+      width: 250px;
+      z-index: 1;
+    }
+
+    .bubble1 {
+      grid-area: bubble1;
+      justify-self: end;
+      align-self: start;
+    }
+
+    .bubble2 {
+      grid-area: bubble2;
+      justify-self: start;
+      align-self: end;
+    }
+
+    .bubble3 {
+      grid-area: bubble3;
+      width: 120px;
+      justify-self: center;
+      align-self: end;
+    }
+
+    .labels {
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .labels a {
+      background-color: #31c1c0;
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: bold;
+      box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      transition: 0.2s ease;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .labels a:hover {
+      background-color: #27aaa8;
+    }
+
+    .labels1 {
+      top: 10%;
+      right: 10%;
+    }
+
+    .labels2 {
+      bottom: 20%;
+      left: 10%;
+    }
+
+    .labels3 {
+      bottom: 12%;
+      left: 44%;
+    }
+
+    .header {
+      grid-area: header;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .header-text {
+      background-color: #3a44c4;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .top-left-label {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #3a44c4;
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      z-index: 5;
+    }
+    .bubblekep{
+
+    }
+      </style>
 </head>
 <body>
     <header>
@@ -119,13 +235,45 @@
         </div> 
     </section>
     <section class="bottom-bubble-tag-section">
-        
+        <!--
         <div class="bubble-tag-parent">
             <div class="bubble1"> <img src="images/BUBOREK-KEP.png" class="bubble-img" alt="" style="opacity: 75%;"></div>
             <div class="bubble2"> <img src="images/BUBOREK-KEP.png" class="bubble-img" alt="" style="opacity: 75%;"></div>
             <div class="bubble3"> <img src="images/BUBOREK-KEP.png" class="bubble-img" alt="" style="opacity: 75%;"></div>
         </div> 
+        -->
 
+
+
+        <div class="container">
+            <!-- Bal felső szöveg -->
+            <div class="top-left-label">Keress játékokat a kedvenc műfajaid alapján</div>
+        
+            <!-- Háttérbuborékok -->
+            <div class="bubble bubble1 bubblekep">
+              <img src="images/BUBOREK-KEP.png" alt="Bubble 1" style="width: 50%; height: auto;">
+              <div class="labels labels1">
+                <a href="">RPG</a>
+                <a href="">Roguelike</a>
+                <a href="">Multiplayer</a>
+              </div>
+            </div>
+            <div class="bubble bubble2 bubblekep">
+              <img src="images/BUBOREK-KEP.png" alt="Bubble 2" style="width: 50%; height: auto;">
+              <div class="labels labels2">
+                <a href="">Akciós</a>
+                <a href="">Legkelendőbb</a>
+                <a href="">Singleplayer</a>
+              </div>
+            </div>
+            <div class="bubble bubble3 bubblekep">
+              <img src="images/BUBOREK-KEP.png" alt="Bubble 3" style="width: 50%; height: auto;">
+              <div class="labels labels3">
+                <a href="">Stratégia</a>
+              </div>
+            </div>
+          </div>
+        
 
 
 
