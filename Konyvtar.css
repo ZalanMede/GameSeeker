@@ -72,9 +72,6 @@ body {
     margin: 0 auto;
     margin-bottom: 9%;
     margin-left: 27%;
-}
-
-#filterek label{
     padding-left: 2%;
 }
 
@@ -89,7 +86,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
+}
   
   /* Hide the browser's default checkbox */
   .container input {
