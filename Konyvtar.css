@@ -147,20 +147,20 @@ body {
 
 
 
-        .parent {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(5, 1fr);
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-            margin: -10px -10px 0px 0px;
-            }
-            
-            .div2 { grid-area: 1 / 1 / 6 / 4; }
-            .div1 { grid-area: 1 / 4 / 6 / 5; }
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin: -10px -10px 0px 0px;
+    }
+    
+    .div2 { grid-area: 1 / 1 / 6 / 4; }
+    .div1 { grid-area: 1 / 4 / 6 / 5; }
             
         
         
