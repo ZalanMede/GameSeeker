@@ -3,12 +3,12 @@
 body{
     background: rgb(65, 82, 186);
     background: linear-gradient(180deg, rgba(65, 82, 186,1) 0%, rgba(26, 9, 53,1) 100%);
-    height: 400vh;
+    height: 370vh;
     font-family: "Press Start 2P", serif;
     font-weight: 400;
     font-style: normal;
 }
-
+ /* nav */
 .navTarto{
     background-color: #4152BA !important;
 }

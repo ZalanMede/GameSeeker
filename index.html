@@ -11,50 +11,56 @@
 
 
     <style>
-    .container {
+
+
+    .parent {
       display: grid;
-      grid-template-areas:
-        "header header"
-        "bubble2 bubble1"
-        ". bubble3";
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto 1fr 1fr;
-      width: 100%;
-      height: 100vh;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      width: 70vw;
+      height: 70vh;
       position: relative;
+    }
+
+    .div1, .div2, .div3 {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .div1 {
+      grid-area: 1 / 1 / 5 / 5;
+    }
+
+    .div2 {
+      grid-area: 1 / 5 / 5 / 9;
+    }
+
+    .div3 {
+      grid-area: 5 / 3 / 9 / 7;
     }
 
     .bubble {
-      position: relative;
-      width: 250px;
+      width: 170%;
+      height: 170%;
+      object-fit: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
       z-index: 1;
     }
 
-    .bubble1 {
-      grid-area: bubble1;
-      justify-self: end;
-      align-self: start;
-    }
-
-    .bubble2 {
-      grid-area: bubble2;
-      justify-self: start;
-      align-self: end;
-    }
-
-    .bubble3 {
-      grid-area: bubble3;
-      width: 120px;
-      justify-self: center;
-      align-self: end;
-    }
-
     .labels {
-      position: absolute;
+      position: relative;
       z-index: 2;
       display: flex;
       flex-direction: column;
       gap: 8px;
+      margin-left: 250px;
+      margin-top: 170px;
     }
 
     .labels a {
@@ -66,7 +72,7 @@
       font-weight: bold;
       box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
       transition: 0.2s ease;
-      font-size: 14px;
+      font-size: 17px;
       text-align: center;
     }
 
@@ -74,27 +80,12 @@
       background-color: #27aaa8;
     }
 
-    .labels1 {
-      top: 10%;
-      right: 10%;
-    }
-
-    .labels2 {
-      bottom: 20%;
-      left: 10%;
-    }
-
-    .labels3 {
-      bottom: 12%;
-      left: 44%;
-    }
-
     .header {
-      grid-area: header;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
     }
 
     .header-text {
@@ -107,22 +98,7 @@
       box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
     }
 
-    .top-left-label {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background-color: #3a44c4;
-      color: white;
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: bold;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-      z-index: 5;
-    }
-    .bubblekep{
 
-    }
       </style>
 </head>
 <body>
@@ -154,86 +130,81 @@
 
 
 
-
-
-
-    <section class="mid-section">
+   
+<section class="mid-section">
         <div class="mid-div"><img src="images/Group 162.svg" id="mid-section-img" alt="" >
-
+            
             <div class="mid-div-right-img"> 
-                <!--
-            <img id="image-js-smth" src="images/Ajanlatok_tutorial.png"  style="height:797px; width: 905.5px; border: 6px solid #1CB3C4; " >
-            </div>
-            <div id="gombok_div">
-                <button onclick="document.getElementById('image-js-smth').src='images/proba kep1.png'" class="gombok" id="felso_gomb"><p class="gombok-p">Ajánlatok</p></button>
-                <button onclick="document.getElementById('image-js-smth').src='images/proba kep2.png'" class="gombok"><p class="gombok-p">Könyvtár</p></button>
-                <button onclick="document.getElementById('image-js-smth').src='images/proba kep3.png'" class="gombok"><p class="gombok-p">Pörgető</p> </button>
-                <button onclick="document.getElementById('image-js-smth').src='images/proba kep4.png'" class="gombok" id="also_gomb"><p class="gombok-p">Összehasonlító</p></button>
-            </div>
-                -->
+                
+            
+                
 
  
 
-            <img id="image-js-smth" src="images/proba_kep1.png" style="height:797px; width: 905.5px; border: 6px solid #1CB3C4; " >
+                <img id="image-js-smth" src="images/proba_kep1.png" style="height:797px; width: 905.5px; border: 6px solid #1CB3C4; " >
 
-    <div id="gombok_div">
-        <button onclick="changeImage(1)" class="gombok" id="felso_gomb"><p class="gombok-p">Ajánlatok</p></button>
-        <button onclick="changeImage(2)" class="gombok"><p class="gombok-p">Pörgető</p></button>
-        <button onclick="changeImage(3)" class="gombok"><p class="gombok-p">Összehasonlító</p> </button>
-        <button onclick="changeImage(4)" class="gombok" id="also_gomb"><p class="gombok-p">Könyvtár</p></button>
-    </div>
-
-    <script>
-        let currentImage = 1; // Alapértelmezett kép száma
-
-        function changeImage(imageNumber) {
-            currentImage = imageNumber;
-            document.getElementById('image-js-smth').src = `images/proba_kep${imageNumber}.png`;
-        }
-
-        const imgElement = document.getElementById('image-js-smth');
-
-        imgElement.addEventListener("mouseenter", function() {
-            imgElement.src = `images/proba_kep${currentImage}_tutorial.png`;
-        });
-
-        imgElement.addEventListener("mouseleave", function() {
-            imgElement.src = `images/proba_kep${currentImage}.png`;
-        });
-    </script>
-
-        
-
-
-        </div>
-    </section>
-    
-
-
-    
-    <section class="ajanlatok">
-
-        <div class="ajanlatok-grid">
-            <div class="div5"> <p class="ajanlatok-p">Ajánlatok</p></div>
-            <div class="div6"> 
-                <div class="ajanlatok-img-grid-outer-bg">
-                    <div class="ajanlatok-img-grid" >
-                        <div class="div8"> <img src="images/ajanlatok-1.png" class="gallery_img2" alt=""></div>
-                        <div class="div9"> <img src="images/ajanlatok-2.png"class="gallery_img2" alt=""></div>
-                        <div class="div10"> <img src="images/ajanlatok-3.png"class="gallery_img2" alt=""></div>
-                        <div class="div11"> <img src="images/ajanlatok-4.png"class="gallery_img2" alt=""></div>
-                        <div class="div12"> <img src="images/ajanlatok-5.png"class="gallery_img2" alt=""></div>
-                        <div class="div13"> <img src="images/ajanlatok-6.png"class="gallery_img2" alt=""></div>
-                        <div class="div14"> <img src="images/ajanlatok-7.png"class="gallery_img2" alt=""></div>
-                        <div class="div15"> <img src="images/ajanlatok-8.png"class="gallery_img2" alt=""></div>
-                    </div> 
+                <div id="gombok_div">
+                    <button onclick="changeImage(1)" class="gombok" id="felso_gomb"><p class="gombok-p">Ajánlatok</p></button>
+                    <button onclick="changeImage(2)" class="gombok"><p class="gombok-p">Pörgető</p></button>
+                    <button onclick="changeImage(3)" class="gombok"><p class="gombok-p">Összehasonlító</p> </button>
+                    <button onclick="changeImage(4)" class="gombok" id="also_gomb"><p class="gombok-p">Könyvtár</p></button>
                 </div>
+            
+                <script>
+                    let currentImage = 1; // Alapértelmezett kép száma
+            
+                    function changeImage(imageNumber) {
+                        currentImage = imageNumber;
+                        document.getElementById('image-js-smth').src = `images/proba_kep${imageNumber}.png`;
+                    }
+            
+                    const imgElement = document.getElementById('image-js-smth');
+            
+                    imgElement.addEventListener("mouseenter", function() {
+                        imgElement.src = `images/proba_kep${currentImage}_tutorial.png`;
+                    });
+            
+                    imgElement.addEventListener("mouseleave", function() {
+                        imgElement.src = `images/proba_kep${currentImage}.png`;
+                    });
+                </script>
+            
+                    
+            
+            
+                    </div>
+                </section>
                 
+            
+            
+                
+                <section class="ajanlatok">
+            
+                    <div class="ajanlatok-grid">
+                        <div class="div5"> <p class="ajanlatok-p">Ajánlatok</p></div>
+                        <div class="div6"> 
+                            <div class="ajanlatok-img-grid-outer-bg">
+                                <div class="ajanlatok-img-grid" >
+                                    <div class="div8"> <img src="images/ajanlatok-1.png" class="gallery_img2" alt=""></div>
+                                    <div class="div9"> <img src="images/ajanlatok-2.png"class="gallery_img2" alt=""></div>
+                                    <div class="div10"> <img src="images/ajanlatok-3.png"class="gallery_img2" alt=""></div>
+                                    <div class="div11"> <img src="images/ajanlatok-4.png"class="gallery_img2" alt=""></div>
+                                    <div class="div12"> <img src="images/ajanlatok-5.png"class="gallery_img2" alt=""></div>
+                                    <div class="div13"> <img src="images/ajanlatok-6.png"class="gallery_img2" alt=""></div>
+                                    <div class="div14"> <img src="images/ajanlatok-7.png"class="gallery_img2" alt=""></div>
+                                    <div class="div15"> <img src="images/ajanlatok-8.png"class="gallery_img2" alt=""></div>
+                                </div> 
+                            </div>
+                            
+            
+                        </div>
+                        <div class="div7"> <p><a href="Ajanlatok.html" class="ajanlatok-a" >Tovább az ajánlatokra </a></p></div>
+                    </div> 
+                </section>
+    -->
 
-            </div>
-            <div class="div7"> <p><a href="Ajanlatok.html" class="ajanlatok-a" >Tovább az ajánlatokra </a></p></div>
-        </div> 
-    </section>
+
+    
     <section class="bottom-bubble-tag-section">
         <!--
         <div class="bubble-tag-parent">
@@ -244,35 +215,34 @@
         -->
 
 
-
-        <div class="container">
-            <!-- Bal felső szöveg -->
-            <div class="top-left-label">Keress játékokat a kedvenc műfajaid alapján</div>
-        
-            <!-- Háttérbuborékok -->
-            <div class="bubble bubble1 bubblekep">
-              <img src="images/BUBOREK-KEP.png" alt="Bubble 1" style="width: 50%; height: auto;">
-              <div class="labels labels1">
-                <a href="">RPG</a>
-                <a href="">Roguelike</a>
-                <a href="">Multiplayer</a>
-              </div>
-            </div>
-            <div class="bubble bubble2 bubblekep">
-              <img src="images/BUBOREK-KEP.png" alt="Bubble 2" style="width: 50%; height: auto;">
-              <div class="labels labels2">
-                <a href="">Akciós</a>
-                <a href="">Legkelendőbb</a>
-                <a href="">Singleplayer</a>
-              </div>
-            </div>
-            <div class="bubble bubble3 bubblekep">
-              <img src="images/BUBOREK-KEP.png" alt="Bubble 3" style="width: 50%; height: auto;">
-              <div class="labels labels3">
-                <a href="">Stratégia</a>
-              </div>
+        <div class="header">
+          <div class="header-text">Keress játékokat a kedvenc műfajaid alapján</div>
+        </div>
+        <div class="parent">
+          <div class="div1">
+            <img src="images/BUBOREK-KEP.png" alt="Bubble 1" class="bubble">
+            <div class="labels">
+              <a href="">RPG</a>
+              <a href="">Roguelike</a>
+              <a href="">Multiplayer</a>
             </div>
           </div>
+          <div class="div2">
+            <img src="images/BUBOREK-KEP.png" alt="Bubble 2" class="bubble">
+            <div class="labels">
+              <a href="">Akciós</a>
+              <a href="">Legkelendőbb</a>
+              <a href="">Singleplayer</a>
+            </div>
+          </div>
+          <div class="div3">
+            <img src="images/BUBOREK-KEP.png" alt="Bubble 3" class="bubble">
+            <div class="labels">
+              <a href="">Stratégia</a>
+            </div>
+          </div>
+          
+        </div>
         
 
 
