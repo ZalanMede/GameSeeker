@@ -8,7 +8,15 @@ body{
   font-weight: 400;
   font-style: normal;
 }
-  
+
+#felgorgGomb{
+  background: linear-gradient(#4152BA, #1A0935)
+}
+
+#felgorgTxt{
+  background: linear-gradient(#1A0935, #4152BA);
+}
+
   /* Keresősáv */
   .search-bar-section .search-bar {
     display: flex;
