@@ -57,7 +57,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: -31px;
+  bottom: -3vh;
   opacity: 0;
   transition-duration: .7s;
 }
@@ -119,7 +119,7 @@ header{
 .navTarto{
     float: right;
     margin: 1vh 1vw;
-    padding: 17px 25px;
+    padding: 2vh 3vw;
     width: 8vw;
     height: 0.1vh;
     background-color: #1CB3C4;
@@ -170,18 +170,18 @@ header{
   z-index: 1;
   left: 0;
   top: 0;
-  background-color: rgb(26,9,53);
-  background-color: rgba(26,9,53, 0.95);
+  background-color: rgb(15, 20, 37);
+  background-color: rgba(15, 20, 37, 0.85);
   overflow-y: hidden;
   transition: 0.5s;
 }
 
 .overlayButton{
-  padding: 16px;
+  padding: 3% 0;
   background-color: #1CB3C4;
-  margin: 3vh 3vw;
+  margin: 5vh 3vw;
   text-decoration: none;
-  font-size: 36px;
+  font-size: 50px;
   color: black;
   display: block;
   transition: 0.3s;
@@ -191,7 +191,7 @@ header{
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 25%;
+  height: 20%;
   cursor: pointer;
 }
 
@@ -204,6 +204,64 @@ header{
   font-size: 120px;
   color: white;
   margin: auto auto
+}
+
+
+
+/* SM overlay */
+#overlaySM{
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgb(15, 20, 37);
+  background-color: rgba(15, 20, 37, 0.85);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+#overlaySMPaused{
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  height: 5%;
+  cursor: pointer;
+}
+
+.overlayButtonSM{
+  padding: 6% 0;
+  background-color: #1CB3C4;
+  margin: 5vh 2vw;
+  text-decoration: none;
+  font-size: 52px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+#overlayPauseLinesSM{
+  width: 25%;
+  margin: 0 auto;
+}
+
+#opencloseOverlaySM{
+  border: none;
+  background: #1CB3C4;
+  position: absolute;
+  right: 3vw;
+  top: 1vh;
+  width: 70%;
+  height: 35px;
+  rotate: 0deg;
+  z-index: 12;
+  animation: none;
+}
+
+#opencloseOverlaySM > img{
+  height: inherit;
+  width: inherit;
 }
 
 /*  Overlay Animations  */
@@ -234,11 +292,29 @@ header{
   }
 }
 
+@keyframes halfSpinForw {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(-180deg);
+  }
+}
+
+@keyframes halfSpinBack {
+  from {
+    transform: rotateX(-180deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
 
 
 /* MD nézet (<= 768)*/
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px){
   #opencloseOverlay{
     display: none;
   }
@@ -251,9 +327,18 @@ header{
   .navMD{
     display: block;
   }
-  #opencloseOverlaySVG{
-    animation: none;
+}
+
+/* SM nézet (<= 576px) */
+
+@media only screen and (min-width: 576px) {
+  #opencloseOverlaySM{
+    display: none;
   }
 }
 
-/* SM nézet (<= 576px)*/
+@media only screen and (max-width: 576px) {
+  #opencloseOverlay{
+    display: none;
+  }
+}

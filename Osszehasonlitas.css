@@ -26,14 +26,11 @@ body{
 
 #hasonContainer{
     display: flex;
+    width: 80%;
+    margin: 0 auto;
 }
 
-#hasonLeft{
-    width: 40%;
-    margin: 2.5%;
-}
-
-#hasonRight{
+#hasonLeft, #hasonRight{
     width: 40%;
     margin: 2.5%;
 }
@@ -123,4 +120,13 @@ body{
 .secMin > p, .secRec > p{
     text-align: left;
     padding: 0 0 5% 8%;
+}
+
+/* MD nézet */
+
+@media only screen and (max-width: 768px) {
+    #hasonContainer{
+        width: 100%;
+        margin: 0;
+    }
 }
