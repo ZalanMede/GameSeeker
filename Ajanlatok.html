@@ -27,6 +27,41 @@
         <div class="navTarto" onclick="location.href='index.html';" style="cursor: pointer;">
             <a href="index.html" class="navGombok">Főoldal</a>
         </div>
+
+        <div id="overlayMD">
+            <div id="overlayMDPaused" onclick="OpenCloseMDSMMenu()">
+                <img id="overlayPauseLines" src="images/PauseLines.svg" alt="Leállítást jelző vonalak">
+                <p id="overlayMDText">PAUSED</p>
+            </div>
+            <div class="overlayElementsDivMD">
+                <a href="" class="overlayButton">Főoldal</a>
+                <a href="" class="overlayButton">Ajánlatok</a>
+                <a href="" class="overlayButton">Könyvtár</a>
+                <a href="" class="overlayButton">Sorsolás</a>
+                <a href="" class="overlayButton">Összehasonlítás</a>
+            </div>
+        </div>
+
+        <div id="overlaySM">
+            <div id="overlaySMPaused" onclick="OpenCloseMDSMMenu()">
+                <img id="overlayPauseLinesSM" src="images/PauseLines.svg" alt="Leállítást jelző vonalak">
+            </div>
+            <div class="overlayElementsDivMD">
+                <a href="" class="overlayButtonSM">Főoldal</a>
+                <a href="" class="overlayButtonSM">Ajánlatok</a>
+                <a href="" class="overlayButtonSM">Könyvtár</a>
+                <a href="" class="overlayButtonSM">Sorsolás</a>
+                <a href="" class="overlayButtonSM">Összehasonlítás</a>
+            </div>
+        </div>
+
+        <button id="opencloseOverlay" onclick="OpenCloseMDSMMenu()">
+            <img id="opencloseOverlaySVG" src="images/menu-symbol-of-three-parallel-lines.svg" alt="3 vonal">
+        </button>
+
+        <button id="opencloseOverlaySM" onclick="OpenCloseMDSMMenu()">
+            <img id="opencloseOverlaySVG_SM" src="images/down-arrow-one.svg" alt="Lefele nyíl">
+        </button>
     </header>
 
     <section id="carouselContainer">
