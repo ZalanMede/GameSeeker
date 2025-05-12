@@ -10,6 +10,7 @@ html{
     scrollbar-color: #1CB3C4 #1A0935;
     scrollbar-width: thin;
     height: auto;
+    min-height: 100vh;
 }
 #search-bar-input{
   font-size: 20pt;
@@ -315,7 +316,7 @@ header{
 
 /* MD nézet (<= 768)*/
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 769px){
   #opencloseOverlay{
     display: none;
   }
@@ -332,7 +333,7 @@ header{
 
 /* SM nézet (<= 576px) */
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 577px) {
   #opencloseOverlaySM{
     display: none;
   }
