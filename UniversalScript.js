@@ -98,3 +98,18 @@ function SwitchLeftToRight(LorR) {
     switchOnL = true;
   }
 }
+let currentImage = 1; 
+function changeImage(imageNumber) {
+    currentImage = imageNumber;
+    document.getElementById('image-js-smth').src = `images/proba_kep${imageNumber}.png`;
+}
+
+const imgElement = document.getElementById('image-js-smth');
+
+imgElement.addEventListener("mouseenter", function() {
+    imgElement.src = `images/proba_kep${currentImage}_tutorial.png`;
+});
+
+imgElement.addEventListener("mouseleave", function() {
+    imgElement.src = `images/proba_kep${currentImage}.png`;
+});
