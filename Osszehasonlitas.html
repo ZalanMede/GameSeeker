@@ -64,6 +64,14 @@
     </header>
 
     <section id="hasonContainer">
+        <div id="hasonSwitch">
+            <div id="switchL" onclick="SwitchLeftToRight('L')">
+                <p>Hollow Knight</p>
+            </div>
+            <div id="switchR" onclick="SwitchLeftToRight('R')">
+                <p>Balatro</p>
+            </div>
+        </div>
         <section id="hasonLeft">
             <div class="secDiv1L">
                 <img src="images/game1_hollowknight.png" alt="Game1">
@@ -85,19 +93,27 @@
                 <h2>Megjelenés: 2017. febr. 24.</h2>
             </div>
             <div class="secDiv5 secL">
-                <div class="secMin">
-                    <p><b>Min:</b><br>
-                        Intel Core i3-12345 <br>
-                        GeForce GTX 1111 <br>
-                        26GB szabad tárhely <br>
-                        8GB RAM</p>
+                <div class="MinRecBtnCont" onclick="OpenCloseSpecMenu('L')">
+                    <p class="MinRecBtnTxt">SPECS</p>
+                    <button class="MinRecButton">
+                        <img id="MinRecButtonSVGL" src="images/down-arrow-one.svg" alt="Lefele nyíl">
+                    </button>
                 </div>
-                <div class="secRec">
-                    <p><b>Ajánlott:</b><br>
-                        Intel Core i3-12345 <br>
-                        GeForce GTX 1111 <br>
-                        26GB szabad tárhely <br>
-                        8GB RAM</p>
+                <div id="MinRecContL">
+                    <div class="secMin">
+                        <p><b>Min:</b><br>
+                            Intel Core i3-12345 <br>
+                            GeForce GTX 1111 <br>
+                            26GB szabad tárhely <br>
+                            8GB RAM</p>
+                    </div>
+                    <div class="secRec">
+                        <p><b>Ajánlott:</b><br>
+                            Intel Core i3-12345 <br>
+                            GeForce GTX 1111 <br>
+                            26GB szabad tárhely <br>
+                            8GB RAM</p>
+                    </div>
                 </div>
             </div>
             <div class="secDiv6 secL">
@@ -132,19 +148,27 @@
                 <h2>Megjelenés: 2024. febr. 20.</h2>
             </div>
             <div class="secDiv5 secR">
-                <div class="secMin">
-                    <p><b>Min:</b><br>
-                        Intel Core i3-12345 <br>
-                        GeForce GTX 1111 <br>
-                        26GB szabad tárhely <br>
-                        8GB RAM</p>
+                <div class="MinRecBtnCont" onclick="OpenCloseSpecMenu('R')">
+                    <p class="MinRecBtnTxt">SPECS</p>
+                    <button class="MinRecButton">
+                        <img id="MinRecButtonSVGR" src="images/down-arrow-one.svg" alt="Lefele nyíl">
+                    </button>
                 </div>
-                <div class="secRec">
-                    <p><b>Ajánlott:</b><br>
-                        Intel Core i3-12345 <br>
-                        GeForce GTX 1111 <br>
-                        26GB szabad tárhely <br>
-                        8GB RAM</p>
+                <div id="MinRecContR">
+                    <div class="secMin">
+                        <p><b>Min:</b><br>
+                            Intel Core i3-12345 <br>
+                            GeForce GTX 1111 <br>
+                            26GB szabad tárhely <br>
+                            8GB RAM</p>
+                    </div>
+                    <div class="secRec">
+                        <p><b>Ajánlott:</b><br>
+                            Intel Core i3-12345 <br>
+                            GeForce GTX 1111 <br>
+                            26GB szabad tárhely <br>
+                            8GB RAM</p>
+                    </div>
                 </div>
             </div>
             <div class="secDiv6 secR">

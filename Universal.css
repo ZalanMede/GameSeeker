@@ -9,6 +9,7 @@ html{
     scroll-behavior: smooth;
     scrollbar-color: #1CB3C4 #1A0935;
     scrollbar-width: thin;
+    height: auto;
 }
 #search-bar-input{
   font-size: 20pt;
