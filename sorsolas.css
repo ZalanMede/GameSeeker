@@ -26,6 +26,14 @@ body{
     background: linear-gradient(#36113C, #E96559);
 }
 
+#kerek{
+  margin-top: 10vh;
+  width: 50%;
+  height: auto;
+  z-index: 1;
+  position: relative;
+}
+
 #porgetes-btn{
     width: 200px;
     height: 100px;
@@ -42,6 +50,8 @@ aside{
     background: linear-gradient(180deg, rgba(236,151,143,1) 0%,  rgba(67,43,71,1) 100%);
     height: 100%;
     width: 20%;
+    z-index: 2;
+    position: relative;
 }
 
 .container {
