@@ -3,7 +3,7 @@
 body{
   background: rgb(65, 82, 186);
   background: linear-gradient(180deg, rgba(65, 82, 186,1) 0%, rgba(26, 9, 53,1) 100%);
-  height: 270vh;
+  height: 190vh;
   font-family: "Press Start 2P", serif;
   font-weight: 400;
   font-style: normal;
@@ -63,7 +63,7 @@ body{
     border: black solid;
     position: relative;
 
-
+    transform: translate(-50%, -50%);
 
   }
 
@@ -106,7 +106,7 @@ float: left;
 
 
 
-
+/*
 
 .tutorial-parent {
   display: grid;
@@ -116,15 +116,25 @@ float: left;
   grid-row-gap: 0px;
   margin: 0 auto;
   margin-bottom: 100px;
-  
   }
   
   .grid-bal { grid-area: 1 / 1 / 2 / 2; }
   .grid-jobb { grid-area: 1 / 2 / 2 / 3; }
 
+  */
   
-  
-
+  .tutorial-parent {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    }
+    
+    .grid-bal { grid-area: 1 / 1 / 3 / 2; }
+    .grid-jobb { grid-area: 1 / 2 / 2 / 3; }
 
 
 
@@ -189,7 +199,7 @@ float: left;
   
   .filter-button {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 15px 25px;
     background-color: #00e5ff;
     border: none;
     border-radius: 20px;
@@ -197,6 +207,12 @@ float: left;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 9pt;
+    
+    font-family: "Press Start 2P", serif;
+    font-weight: 200;
+    font-style: italic;
+
   }
   
   .filter-button:hover {
@@ -272,8 +288,7 @@ float: left;
 
 
 #iframe-kep{
-  height: 609px;
-  width: 730px;
+  height: 50%;  width: 50%;
   margin-left: 26%;
   overflow: hidden;
   float: right;
