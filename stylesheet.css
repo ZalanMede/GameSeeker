@@ -30,20 +30,22 @@ body{
     border-radius: 30px 0 0 30px;
     border: none;
     outline: none;
+    background-color: #30FFC9;
+    font-size: 12pt;
   }
 
   .search-bar-section button {
     padding: 10px 20px;
     border: none;
     border-radius: 0 30px 30px 0;
-    background-color: #00e5ff;
+    background-color: #30FFC9;
     cursor: pointer;
   }
   
   /* Fő rész */
   .main-section {
    
-    gap: 20px;
+ 
     padding: 20px;
   }
   
@@ -241,6 +243,11 @@ float: left;
     border-radius: 30px;
     font-size: 14px;
   }
+
+  .tag:hover{
+    background-color: #00e5ff;
+    cursor: pointer;
+  }
   
   /* Footer */
   footer {
@@ -265,7 +272,9 @@ float: left;
 
 
 #iframe-kep{
-  height: 700px;
+  height: 609px;
   width: 730px;
   margin-left: 26%;
+  overflow: hidden;
+  float: right;
 }
