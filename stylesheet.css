@@ -70,8 +70,8 @@ body{
 
 .gombok_div{
   position: absolute;
-  margin-top: 21%;
-  margin-left: 17%;
+  top: 50%;
+  left: 28%;
 }
 #mid-section-img{
   float: right;
@@ -125,7 +125,7 @@ float: left;
   
   .tutorial-parent {
     display: grid;
-    grid-template-columns: 3fr 5fr;
+    grid-template-columns: 3fr 4fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -150,15 +150,20 @@ float: left;
   #ajanlatok{
     
     text-align: center;
+    
     background-color: #4152BA;
     width: 150px;
-    height: 50px;
+    height: 30px;
     border-radius: 15px;
     margin: 0 auto;
     font-size: 30px;
     color: white;
     padding: 10px;
+    top: 90%;
+    left: 43%;
+    position: absolute;
   }
+
 
   .recommended-section {
     padding: 20px;
@@ -288,7 +293,8 @@ float: left;
 
 
 #iframe-kep{
-  height: 50%;  width: 50%;
+  height: 609px;
+  width: 600px;
   margin-left: 26%;
   overflow: hidden;
   float: right;
