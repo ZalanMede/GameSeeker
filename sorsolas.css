@@ -27,11 +27,13 @@ body{
 }
 
 #kerek{
-  margin-top: 10vh;
-  width: 50%;
+  margin-top: 0vh;
+  width: 55%;
   height: auto;
   z-index: 1;
-  position: relative;
+  position: absolute;
+  margin-left: 45%;
+
 }
 
 #porgetes-btn{
