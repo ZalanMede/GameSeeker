@@ -29,9 +29,11 @@ body{
 #porgetes-btn{
     width: 200px;
     height: 100px;
-    font-size: 27pt;
+    font-size: 25pt;
     background: linear-gradient(180deg, rgba(233, 101, 89, 1) 50%, rgba(54, 17, 60, 1) 100%);
     border: none;
+    margin-top: 45vh;
+    margin-left: 10vw;
 }
 #porgetes-btn:hover{
     background: linear-gradient(180deg, rgba(54, 17, 60, 1) 50%, rgba(233, 101, 89, 1) 100%);
@@ -48,16 +50,19 @@ aside{
   text-align: center;
     display: block;
     position: relative;
-    padding-left: px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 21px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     margin-top: 5%;
     margin-left: 25%;
+    color: white;
+    background-color: #BE2C5D;
+    margin-right: 10%;
+    border-radius: 25px;
 }
   
   /* Hide the browser's default checkbox */
