@@ -1,7 +1,7 @@
 body{
     background: rgb(236,99,93);
     background: linear-gradient(180deg, rgba(236,99,93,1) 0%, rgba(255,207,107,1) 100%);
-    height: 100%;
+    height: auto;
 }
 
 .navTarto{
@@ -26,16 +26,14 @@ body{
 
 #hasonContainer{
     display: flex;
+    width: 80%;
+    margin: 0 auto;
 }
 
-#hasonLeft{
+#hasonLeft, #hasonRight{
     width: 40%;
     margin: 2.5%;
-}
-
-#hasonRight{
-    width: 40%;
-    margin: 2.5%;
+    margin-top: 0;
 }
 
 #nyilakDiv{
@@ -114,13 +112,155 @@ body{
 
 .secDiv5{
     display: flex;
+    flex-direction: column;
+}
+
+#MinRecContR, #MinRecContL{
+    display: flex;
+    flex-direction: row;
 }
 
 .secMin, .secRec{
     width: 100%;
 }
 
+.MinRecBtnCont{
+    display: none;
+    flex-direction: row;
+}
+
+.MinRecBtnTxt{
+    font-size: 2vw;
+    margin: 2vh 3vw;
+}
+
+.MinRecButton{
+    border: none;
+    background: none;
+}
+
+#MinRecButtonSVGR, #MinRecButtonSVGL{
+    width: 15%;
+    animation: none;
+}
+
 .secMin > p, .secRec > p{
     text-align: left;
     padding: 0 0 5% 8%;
+}
+
+/* Panel Switch */
+#hasonSwitch{
+    display: none;
+    flex-direction: row;
+    height: 8vh;
+    width: 95%;
+    margin: 5% auto 0 auto;
+}
+
+#hasonSwitch > div > p{
+    font-size: 7vw;
+    margin: 6% 0;
+    text-align: center;
+}
+
+#switchL, #switchR{
+    width: 50%;
+    cursor: pointer;
+}
+
+#switchL{
+    background: #A73C38;
+    background: linear-gradient(90deg, rgba(167,60,56,1) 0%, rgba(65,23,22,1) 200%);
+}
+
+#switchR{
+    background: #4152BA;
+    background: linear-gradient(90deg, rgba(29,37,84,1) -100%, rgba(65,82,186,1) 100%); 
+}
+
+/* MD nézet */
+
+@media only screen and (max-width: 768px) {
+    #hasonContainer{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+/* SM nézet */
+
+@media only screen and (min-width: 577px) {
+    /* here for switch stuff */
+    #hasonRight, #hasonLeft{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #hasonContainer{
+        flex-direction: column;
+        height: 200%;
+    }
+
+    #nyilakDiv{
+        display: none;
+    }
+
+    #hasonLeft, #hasonRight{
+        width: 95%;
+    }
+
+    .secL > h2, .secR > h2{
+        font-size: 9vw;
+    }
+
+    .secL p, .secR p{
+        font-size: 5vw;
+    }
+    .secDiv1L > h2, .secDiv1R > h2{
+        font-size: 8vw;
+    }
+
+    #MinRecContR, #MinRecContL{
+        display: none;
+    }
+
+    .MinRecBtnCont{
+        display: flex;
+    }
+
+    #hasonSwitch{
+        display: flex;
+    }
+
+    /* here for switch stuff */
+    #hasonRight{
+        display: none;
+    }
+}
+
+
+
+
+
+/* Animations */
+
+@keyframes halfSpinForw {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(-180deg);
+  }
+}
+
+@keyframes halfSpinBack {
+  from {
+    transform: rotateX(-180deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
 }
