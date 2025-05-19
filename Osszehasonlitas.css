@@ -26,7 +26,7 @@ body{
 
 #hasonContainer{
     display: flex;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -186,6 +186,18 @@ body{
         width: 100%;
         margin: 0;
     }
+
+    .secL > h2, .secR > h2{
+        font-size: 5vw;
+    }
+
+    .MinRecBtnTxt{
+        font-size: 5vw;
+    }
+
+    .secL p, .secR p{
+        font-size: 3vw;
+    }
 }
 
 
@@ -202,6 +214,10 @@ body{
     #hasonContainer{
         flex-direction: column;
         height: 200%;
+    }
+
+    #hasonLeft, #hasonRight{
+        margin-top: 0;
     }
 
     #nyilakDiv{
