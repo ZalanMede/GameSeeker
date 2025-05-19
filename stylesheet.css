@@ -294,10 +294,8 @@ float: left;
 
 
 
-#iframe-kep{
-  height: 800px;
-  width: 600px;
-  margin-left: 26%;
-  overflow: hidden;
-  float: right;
-}
+  #iframe-kep{
+    height: 100%;
+    width: 600px;
+    overflow: hidden;
+  }

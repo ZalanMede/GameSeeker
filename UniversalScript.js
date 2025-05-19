@@ -106,6 +106,23 @@ function changeImage(imageNumber) {
 
 const imgElement = document.getElementById('image-js-smth');
 
+if(currentImage=1)
+{
+  document.getElementById("iframe-kep").src = "Ajanlatok.html";
+}
+else if(currentImage = 2)
+{
+  document.getElementById("iframe-kep").src = "sorsolas.html";
+}
+else if(currentImage = 3)
+{
+  document.getElementById("iframe-kep").src = "Osszehasonlitas.html";
+}
+else if(currentImage = 4)
+{
+  document.getElementById("iframe-kep").src = "Konyvtar.html";
+}
+
 imgElement.addEventListener("mouseenter", function() {
     imgElement.src = `images/proba_kep${currentImage}_tutorial.png`;
 });
