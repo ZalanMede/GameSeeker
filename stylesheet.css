@@ -299,13 +299,19 @@ body{
       }
 
       .main-section{
-        height: 800px;
+        height: 90%;
       }
       .recommended-section{
         height: 700px;
       }
       .recommended-grid{
         margin-top: 100px;
+      }
+      .recommended-section{
+        height: 10%;
+      }
+      body{
+        height: 270vh;
       }
   }
   @media (max-width: 1000px){
@@ -314,6 +320,7 @@ body{
       margin: 0 auto;
       margin-bottom: 100px;
       }
+
   }
   @media (max-width: 970px){
     .tutorial-parent {
@@ -321,6 +328,7 @@ body{
       margin: 0 auto;
       margin-bottom: 100px;
       }
+
   }
   @media (max-width: 940px){
     .tutorial-parent {
@@ -342,6 +350,7 @@ body{
       left: calc(100% - 135px); 
       width: 120px; 
     }
+
 }
 @media (max-width: 923px){
   .tutorial-parent {
@@ -383,6 +392,10 @@ body{
       left: calc(100% - 135px); 
       width: 120px; 
     }
+ }
+    body{
+      height: 240vh;
+    }
 }
 @media (max-width: 878px){
   .tutorial-parent {
@@ -391,7 +404,7 @@ body{
     margin-bottom: 100px;
     }
     #iframe-kep {
-      width: 540.3px;
+      width: 500.3px;
       height: 650px;
     }
     .grid-bal, #mid-section-img {
@@ -614,9 +627,12 @@ body{
       position: absolute;
       top: 57px; 
       left: 500px; 
-      width: 120px; 
+      width: 120px; }
+      .recommended-section{
+        height: 10%;
+      }
 }
-}
+
 
     @media (max-width: 707px){
       .tutorial-parent,.mid-div{
@@ -654,11 +670,14 @@ body{
     body{
       height: 230vh;
     }
+    .main-section{
+      height: 900px;
+    }
 }
 @media (max-width: 685px){
   .grid-jobb,#iframe-kep {
     width: 600px;
-    height: 520px;
+    height: 540px;
   }
   #iframe-overlay{
     width: 100%;
@@ -685,6 +704,9 @@ body{
   .gombok-p{
     margin: 0 auto; 
     padding-top: 27.5px;
+  }
+  .main-section{
+    height: 900px;
   }
 }
 @media (max-width: 650px){
@@ -834,7 +856,7 @@ body{
 
   .grid-jobb, #iframe-kep {
     width: 500px;
-    height: 440px;
+    height: 460px;
   }
   #iframe-overlay{
     width: 100%;

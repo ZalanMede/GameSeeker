@@ -180,35 +180,73 @@ function closeParent(event){
 
 /* Gyutai code */
 
-let currentImage = 1; 
+let currentImage = 1;
+
 function changeImage(imageNumber) {
     currentImage = imageNumber;
-    document.getElementById('image-js-smth').src = `images/proba_kep${imageNumber}.png`;
+    const iframe = document.getElementById("iframe-kep");
+
+    switch (currentImage) {
+        case 1:
+            iframe.src = "Ajanlatok.html";
+            break;
+        case 2:
+            iframe.src = "sorsolas.html";
+            break;
+        case 3:
+            iframe.src = "Osszehasonlitas.html";
+            break;
+        case 4:
+            iframe.src = "Konyvtar.html";
+            break;
+    }
 }
 
-const imgElement = document.getElementById('image-js-smth');
+// Hover események kezelése
+const iframeElement = document.getElementById("iframe-kep");
+const overlay = document.getElementById("iframe-overlay");
 
-if(currentImage=1)
-{
-  document.getElementById("iframe-kep").src = "Ajanlatok.html";
+iframeElement.addEventListener("mouseenter", () => {
+    let message = "";
+    switch (currentImage) {
+        case 1:
+            message = `Ez itt az ajánlatok oldal<br><br>
+                Ezen az oldalon találhatsz olyan játékokat, amiket mi ajánlunk neked.<br><br>
+                Ha a kurzorod ráviszed egy játékra, több információt tudhatsz meg róla.`;
+            break;
+        case 2:
+            message = `Ez itt a sorsolás oldal<br><br>
+                Ezen az oldalon sorsolhatod ki hogy melyik játékot játszd következőnek.<br><br>
+                A jobb oldalon láthatod a könyvtárban tárolt játékaidat. <br><br>
+                Amelyik be van X-elve, az bekerül a sorsolásba. <br><br>
+                Miután kiválogattad, mely játékok legyenek benne a kerékben, nyomj a pörgetés gombra.<br><br>
+                Végül megkapod a kisorsolt játékot.`;
+            break;
+        case 3:
+            message = `Ez itt az összehasonlítás oldal<br><br>
+                Ezen az oldalon találhatsz összehasonlíthatsz két, általad kiválasztott játékot.<br><br>
+                Először válassz ki a könyvtáradban lévő játékok közül kettőt.<br><br>
+                Ezek után az oldal összehasonlítja a játékokat értékelés, ár és más tulajdonságk alapján`;
+            break;
+        case 4:
+            message = `Ez itt a könyvtár oldal<br><br>
+                Ezen az oldalon tárolhatod a már megszerzett játékaidat.<br><br>
+                A keresővel tudsz rákeresni bizonyos játékokra.<br><br>
+                A keresésed eredményét szűrheted a filterek segítségével`;
+            break;
 }
-else if(currentImage = 2)
-{
-  document.getElementById("iframe-kep").src = "sorsolas.html";
-}
-else if(currentImage = 3)
-{
-  document.getElementById("iframe-kep").src = "Osszehasonlitas.html";
-}
-else if(currentImage = 4)
-{
-  document.getElementById("iframe-kep").src = "Konyvtar.html";
-}
-
-imgElement.addEventListener("mouseenter", function() {
-    imgElement.src = `images/proba_kep${currentImage}_tutorial.png`;
+    overlay.innerHTML = message;
+    overlay.style.display = "flex";
 });
 
-imgElement.addEventListener("mouseleave", function() {
-    imgElement.src = `images/proba_kep${currentImage}.png`;
+iframeElement.addEventListener("mouseleave", () => {
+    overlay.style.display = "none";
+});
+let overlayVisible = false;
+
+iframeElement.addEventListener("click", () => {
+    if (window.innerWidth <= 768) { // csak mobil nézetben
+        overlayVisible = !overlayVisible;
+        overlay.style.display = overlayVisible ? "flex" : "none";
+    }
 });
