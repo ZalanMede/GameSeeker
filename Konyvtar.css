@@ -211,7 +211,7 @@ body {
   }
   #filterek{
     margin-top: 10px;
-    height: 349vh;
+    height: 363vh;
   }
 }
 
@@ -223,7 +223,7 @@ body {
     width: 19px;
   }
   .container .checkmark:after {
-    left: 5px;
+    left: 4px;
     top: -1px;
   }
   #filterek label{
@@ -241,5 +241,11 @@ body {
 @media only screen and (max-width: 673px) {
   #filterek label{
     width: 68%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #filterek{
+    display: none;
   }
 }
