@@ -124,7 +124,7 @@
     <section class="smallColumnCont">
 
         <div class="smallItemCard">
-            <div class="smallItemBaseCont" onclick="openChild()">
+            <div class="smallItemBaseCont" onclick="openNeighbour()">
                 <img class="smallItemImg" src="images/Balatro.png" alt="Balatro">
                 <p class="smallItemTextName">Phasmophobia</p>
                 <p class="smallItemTextPrice">999.99</p>
@@ -132,7 +132,7 @@
             <div class="smallItemHoverCont">
                 <img class="smallItemHoverImg" src="images/Balatro.png" alt="Balatro">
                 <div class="smallHoverTextCont">
-                    <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                    <button class="closeBtnSmall" onmouseover="closeParent(this)" onmouseout="reopenParent()">X</button>
                     <div class="smallHoverRowNameAndPrice">
                         <p>Phasmophobia</p>
                         <p>999.99</p>

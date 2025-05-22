@@ -170,10 +170,13 @@ function FelkAkcSwitch(LorR){
 }
 
 function closeParent(event){
-  let clicked = event.target;
+  let par = event.parentElement;
+  par.parentElement.style.opacity = "0";
+}
 
-  let par1 = clicked.parentNode;
-  par1.parentElement.style.opacity = "1";
+function reopenParent(event){
+  let par = event.parentElement;
+  par.parentElement.style.opacity = "1";
 }
 
 
