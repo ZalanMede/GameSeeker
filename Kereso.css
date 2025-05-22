@@ -159,7 +159,9 @@ body {
     }
     
     .div1 { grid-area: 1 / 1 / 6 / 2; }
-    .div2 { grid-area: 1 / 2 / 6 / 5; }
+    .div2 { grid-area: 1 / 2 / 6 / 5; 
+    height: 420vh;
+    }
 
 
 
@@ -257,12 +259,13 @@ body {
   position: relative;
   width: 25%;
   aspect-ratio: 4 / 4;
+  margin: 2% 2%;
 }
 
 .smallItemImg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   display: block;
   border-radius: 6px;
   aspect-ratio: 4 / 4;
@@ -278,7 +281,7 @@ body {
   position: absolute;
   bottom: -1vh;
   left: 3%;
-  color: white;
+  color: black;
   font-size: 2vw;
 }
 
@@ -286,7 +289,7 @@ body {
   position: absolute;
   bottom: -1vh;
   right: 3%;
-  color: white;
+  color: black;
   font-size: 2vw;
 }
 
@@ -296,7 +299,7 @@ body {
   left: 0;
   color: white;
   font-size: 2vw;
-  background: bisque;
+  background: #FFCF6B;
   height: 20%;
   width: 100%;
 }
