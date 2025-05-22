@@ -1,7 +1,9 @@
 body{
     background: rgb(255,207,107);
     background: linear-gradient(180deg, rgba(255,207,107,1) 0%, rgba(233,101,89,1) 100%);
-    height: 200vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .navTarto{
@@ -32,7 +34,7 @@ ol, li {
     padding: 0;
 }
 
-.carouselContainer {
+#carouselContainer {
     position: relative;
     padding-top: 75%;
     filter: drop-shadow(0 0 10px #0003);
@@ -40,9 +42,8 @@ ol, li {
 }
 
 .carViewPort {
-    scroll-margin-top: 1000px;
     margin: auto auto;
-    position: absolute;
+    position: absolute ;
     top: 0;
     right: 0;
     bottom: 0;
@@ -79,7 +80,6 @@ ol, li {
     width: 100%;
     background-color: #f99;
     counter-increment: item;
-    scroll-margin-top: 5000px;
 }
 
 .carSlide:nth-child(even) {
@@ -99,18 +99,10 @@ ol, li {
 .carSnapper {
     position: absolute;
     top: 0;
-    left: 0px;
+    left: 0;
     width: 100%;
     height: 100%;
     scroll-snap-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#carSScroll1, #carSScroll2, #carSScroll3{
-    position: relative;
-    bottom: 50vh;
 }
 
 @media (hover: hover) {
@@ -138,20 +130,12 @@ ol, li {
 
 .carNav {
     position: relative;
-    top: 70vh;
     width: 100%;
     text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
 
 .carNavList, .carNavItem {
     display: inline-block;
-}
-
-.carNavItem{
-    scroll-margin-top: 1000px;
 }
 
 .carNavButton {
@@ -174,24 +158,22 @@ ol, li {
 .carouselContainer::before, .carouselContainer::after, .carPrev, .carNext {
     position: absolute;
     top: 0;
+    margin-top: 37.5%;
     width: 4rem;
     height: 4rem;
     transform: translateY(-50%);
     border-radius: 50%;
-    font-size: 65px;
+    font-size: 0;
     outline: 0;
-    text-align: center;
 }
 
 .carouselContainer::before, .carPrev {
-    position: relative;
-    top: 50%;
+    left: -1rem;
 }
   
 .carouselContainer::after,
 .carNext {
-    position: relative;
-    top: 50%;
+    right: -1rem;
 }
 
 .carouselContainer::before,
@@ -210,8 +192,594 @@ ol, li {
 }
 
 #carSlide1, #carSlide2, #carSlide3{
-    display: inline-block;
-    
+    scroll-margin-top: 30vh;
 }
 
-/* Carousel vége */
+
+
+
+/* Kicsi hovaralbe dolgok */
+
+.smallColumnCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 3vw;
+    margin: 0 auto;
+    width: 95%;
+    position: relative;
+}
+
+.smallItemCard {
+    position: relative;
+    width: 25%;
+    aspect-ratio: 4 / 4;
+}
+
+.smallItemImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+    aspect-ratio: 4 / 4;
+    opacity: 1;
+}
+
+.smallItemBaseCont{
+    background-color: rgb(97, 97, 252);
+    border-radius: 6px;
+}
+
+.smallItemTextName{
+    position: absolute;
+    bottom: -1vh;
+    left: 3%;
+    color: white;
+    font-size: 2vw;
+}
+
+.smallItemTextPrice{
+    position: absolute;
+    bottom: -1vh;
+    right: 3%;
+    color: white;
+    font-size: 2vw;
+}
+
+/* Small Hover stuff */
+
+.smallItemHoverCont {
+    position: absolute;
+    top: -5px;
+    left: -0.8vw;
+    right: -0.8vw;
+    bottom: auto;
+    background-color: #090935;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.smallItemHoverCont .smallItemHoverImg {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 4 / 4;
+    border-radius: 6px;
+}
+
+.smallItemHoverCont p {
+    margin-top: 20px;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 0;
+}
+
+.smallHoverTextCont{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 95%;
+}
+
+.smallHoverRowNameAndPrice{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 12px 0 0 0;
+}
+
+.smallHoverRowNameAndPrice p {
+    line-height: 15px;
+    margin: 7px 0 0 0;
+    text-align: start;
+}
+
+.smallItemStarText{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 5px;
+}
+
+.smallItemStarText > p{
+    line-height: 0;
+    margin: 0 5px 0 10px;
+    font-weight: 100;
+}
+
+.smallItemStar{
+    width: 15%;
+    height: 15%;
+}
+
+.smallItemFilterCont p{
+    text-align: start;
+    margin: 1vh auto 1vh auto;
+    font-size: large;
+    line-height: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.smallItemBtn{
+    border: none;
+    background-color: #1CB3C4;
+    color: black;
+    font-size: 25px;
+    font-family: "Jersey 10", serif;
+    width: 80%;
+    height: 50px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+.smallItemCard:hover .smallItemHoverCont, .smallItemHoverCont:hover .smallItemHoverCont{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (max-width: 480px) {
+    .smallItemHoverCont {
+    top: -2vh;
+    bottom: -2vh;
+    left: -3vw;
+    right: -3vw;
+    padding: 5px 40px;
+}
+
+    .smallItemHoverCont p {
+    font-size: 0.95rem;
+}
+}
+
+
+/* Switch and SM*/
+#wideSwitchMDSM{
+    display: none;
+}
+
+.closeBtnSmall{
+    display: none;
+}
+
+/* Hosszú hoverable dolgok */
+
+.wideColumnCont{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    position: relative;
+    top: 5vh;
+    margin: 0;
+}
+
+.wideItemCont > h1{
+    margin: 0 auto;
+    font-size: 7vw;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+
+.wideItemCont {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    width: 40%;
+    margin: 0 auto;
+    border: #1A0935 15px solid;
+    background-color: #1A0935;
+}
+
+.wideItemCard {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 20 / 4;
+    display: grid;
+}
+
+.wideItemCard > *{
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.wideItemImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+    aspect-ratio: 20 / 4;
+    opacity: 0.6;
+}
+
+.wideItemBaseCont{
+    background-color: rgb(97, 97, 252);
+    border-radius: 6px;
+    display: grid;
+}
+
+.wideItemBaseCont > *{
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.wideItemBaseTxt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto 10px;
+    height: 50%;
+    gap: 15px;
+}
+
+.wideItemTextName{
+    margin: 0;
+    color: white;
+    font-size: 2vw;
+    z-index: 2;
+}
+
+.wideItemTextPrice{
+    margin: 0;
+    color: white;
+    font-size: 2vw;
+    z-index: 2;
+}
+
+/* Hover stuff */
+
+.wideItemHoverCont {
+    position: relative;
+    background-color: #090935;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+    pointer-events: none;
+    margin: -5px 0 -65% 0;
+}
+
+.wideItemHoverCont .wideItemHoverImg {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 20 / 5;
+    border-radius: 6px;
+}
+
+.wideItemHoverCont p {
+    margin-top: 20px;
+    color: white;
+    font-size: 2.2rem;
+    text-align: center;
+    line-height: 0;
+}
+
+.wideHoverTextCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 95%;
+}
+
+.wideHoverRowNameAndPrice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1vh;
+}
+
+.wideItemStarText{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wideItemStarText > p{
+    line-height: 0;
+    margin: auto 0;
+    font-weight: 100;
+}
+
+.wideItemStars{
+    width: 75%;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wideItemFilterCont p{
+    text-align: start;
+    margin: 4vh auto;
+    font-size: larger;
+    line-height: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.wideItemBtn{
+    border: none;
+    background-color: #1CB3C4;
+    color: black;
+    font-size: 30px;
+    font-family: "Jersey 10", serif;
+    width: 60%;
+    height: 50px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+.wideItemCard:hover .wideItemHoverCont, .wideItemHoverCont:hover .wideItemHoverCont{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (max-width: 480px) {
+    .wideItemHoverCont {
+    top: -2vh;
+    bottom: -2vh;
+    left: -3vw;
+    right: -3vw;
+    padding: 5px 40px;
+}
+
+    .wideItemHoverCont p {
+    font-size: 0.95rem;
+}
+}
+
+#footerCont{
+    margin-top: 30%;
+    width: 100%;
+    height: 5vh;
+    align-self: flex-end;
+}
+
+/* Text fix */
+
+@media screen and (min-width: 900px) {
+    .wideItemHoverCont{
+        margin: -5px 0 -50% 0;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .smallItemBtn{
+        font-size: 2.75vw;
+    }
+}
+
+/* MD nézet */
+
+@media screen and (max-width: 768px){
+
+    /* Wide Item */
+
+    .wideItemHoverCont{
+        margin: -5px 0 -40% 0;
+    }
+
+    .wideHoverRowNameAndPrice{
+        flex-direction: column;
+        width: 5%;
+        text-align: start;
+    }
+
+    #wideSwitchMDSM{
+        border: solid 15px #1A0935;
+        border-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        height: 5%;
+    }
+
+    #wideSwitchL, #wideSwitchR{
+        width: 50%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #wideSwitchR{
+        cursor: pointer;
+    }
+
+    #wideSwitchMDSM > div > p{
+        font-size: 7vw;
+        color: white;
+        text-align: center;
+    }
+
+    .wideColumnCont{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+
+    .wideItemCont{
+        width: 90%;
+        margin-bottom: 30vh;
+    }
+
+    .wideItemBaseTxt{
+        height: 100%;
+    }
+
+    .wideItemBaseTxt p{
+        font-size: 5vw;
+    }
+
+    .wideHoverTextCont{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .wideItemStarText{
+        order: 2;
+        width: 50%;
+    }
+
+    .wideHoverRowNameAndPrice{
+        order: 1;
+        width: 50%;
+    }
+
+    .wideHoverRowNameAndPrice p{
+        text-align: left;
+        margin: 15px 0;
+    }
+
+    .wideItemFilterCont{
+        order: 3;
+    }
+
+    .wideItemBtn{
+        order: 4;
+    }
+
+
+    /* Small container */
+
+    #lastSmallCard{
+        display: none;
+    }
+
+    .smallColumnCont{
+        margin: 7vh auto;
+    }
+
+    .smallHoverTextCont{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .smallHoverTextCont p{
+        font-size: 3vw;
+    }
+
+    .smallItemFilterCont p{
+        font-size: 2vw;
+    }
+
+    .smallItemStarText{
+        flex-direction: row-reverse;
+        margin-top: 5px;
+    }
+
+    .smallItemStarText p{
+        margin: 0;
+    }
+
+    .smallItemBtn{
+        font-size: 2.5vw;
+    }
+
+    /* For JS */
+
+    .wideColumnCont h1, #rightWideCont{
+        display: none;
+    }
+    
+    #leftWideCont{
+        display: flex;
+    }
+
+    #wideSwitchL{
+        background: #1A0935;
+    }
+
+    #wideSwitchR{
+        background: #23BBFF;
+    }
+}
+
+
+/* SM nézet */
+
+@media screen and (max-width: 576px){
+    .closeBtnSmall{
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 20px;
+        width: 20%;
+        height: 10%;
+        color: black;
+        padding: 0;
+        margin: 0 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+
+
+
+    #wideSwitchMDSM{
+        flex-direction: column-reverse;
+        width: 100%;
+        border: 0;
+    }
+
+    #wideSwitchL, #wideSwitchR{
+        width: 100%;
+    }
+
+    #wideSwitchMDSM > div > p{
+        font-size: 9vw;
+        margin: 15px 0;
+    }
+
+    /* Small Items */
+
+    .smallItemHoverCont{
+        padding: 0;
+    }
+
+    /* Wide Items */
+
+    .wideItemCont{
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        margin-bottom: 20vh;
+    }
+}

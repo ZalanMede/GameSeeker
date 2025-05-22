@@ -29,6 +29,7 @@ body {
     background-color: #BE2C5D;
     height: 100%;
     width: 100%;
+    margin-top: -1px;
 }
 
 #filterek h2,label{
@@ -200,4 +201,43 @@ body {
 
 #cim{
   margin-left: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+  #search-bar-input{
+    margin-top: 0%;
+  }
+  #filterek{
+    margin-top: 10px;
+    height: 349vh;
+  }
+}
+
+@media only screen and (max-width: 861px) {
+  .container{
+    font-size: 14px;
+  }
+  .checkmark{
+    width: 17px;
+  }
+  .container .checkmark:after {
+    left: 5px;
+    top: 0px;
+  }
+  #filterek label{
+    margin-bottom: 15%;
+  }
+}
+
+@media only screen and (max-width: 533px) {
+  #filterek{
+    margin-top: 10px;
+    height: 671vh;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #filterek{
+    display: none;
+  }
 }

@@ -1,7 +1,10 @@
+/* Mede Code */
+
 let gorgButton = document.getElementById("felgorgGomb");
 let openMD = false;
 let openSpec = true;
 let switchOnL = true;
+let swapOnL = true;
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -98,6 +101,85 @@ function SwitchLeftToRight(LorR) {
     switchOnL = true;
   }
 }
+
+
+function SwitchLeftToRight(LorR) {
+  if (switchOnL && LorR == 'R') 
+  {
+    document.getElementById("MinRecCont"+LorR).style.display = "none";
+    MinRecBtn = document.getElementById("MinRecButtonSVG"+LorR);
+    MinRecBtn.style.animation = "halfSpinBack 0.5s linear 1 forwards";
+    openSpec = true;
+
+    hasonR = document.getElementById("hasonRight")
+    hasonR.style.display = "block";
+    hasonL = document.getElementById("hasonLeft")
+    hasonL.style.display = "none";
+
+    switchOnL = false;
+  }
+  else if (!switchOnL && LorR == 'L')
+  {
+    document.getElementById("MinRecCont"+LorR).style.display = "none";
+    MinRecBtn = document.getElementById("MinRecButtonSVG"+LorR);
+    MinRecBtn.style.animation = "halfSpinBack 0.5s linear 1 forwards";
+    openSpec = true;
+
+    hasonR = document.getElementById("hasonRight")
+    hasonR.style.display = "none";
+    hasonL = document.getElementById("hasonLeft")
+    hasonL.style.display = "block";
+
+    switchOnL = true;
+  }
+}
+
+function FelkAkcSwitch(LorR){
+  if (swapOnL && LorR == 'R') {
+    document.getElementById("leftWideCont").style.display = "none";
+    document.getElementById("wideSwitchL").style.background = "#23BBFF";
+    document.getElementById("wideSwitchL").style.cursor = "pointer"
+
+    document.getElementById("rightWideCont").style.display = "flex";
+    document.getElementById("wideSwitchR").style.background = "#1A0935";
+    document.getElementById("wideSwitchR").style.cursor = "default"
+
+    if (window.innerWidth < 576) {
+      document.getElementById("wideSwitchR").style.order = 0;
+      document.getElementById("wideSwitchL").style.order = 1;
+    }
+
+    swapOnL = false;
+  }
+  else if(!swapOnL && LorR == 'L'){
+    document.getElementById("leftWideCont").style.display = "flex";
+    document.getElementById("wideSwitchL").style.background = "#1A0935";
+    document.getElementById("wideSwitchL").style.cursor = "default"
+
+    document.getElementById("rightWideCont").style.display = "none";
+    document.getElementById("wideSwitchR").style.background = "#23BBFF";
+    document.getElementById("wideSwitchR").style.cursor = "pointer"
+
+    if (window.innerWidth < 576) {
+      document.getElementById("wideSwitchR").style.order = 1;
+      document.getElementById("wideSwitchL").style.order = 0;
+    }
+
+    swapOnL = true;
+  }
+}
+
+function closeParent(event){
+  let clicked = event.target;
+
+  let par1 = clicked.parentNode;
+  par1.parentElement.style.opacity = "1";
+}
+
+
+
+/* Gyutai code */
+
 let currentImage = 1; 
 function changeImage(imageNumber) {
     currentImage = imageNumber;

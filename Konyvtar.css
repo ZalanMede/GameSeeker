@@ -30,6 +30,7 @@ body {
     background-color: #301E6A;
     height: 100%;
     width: 100%;
+    margin-top: -1px;
 }
 
 #filterek h2,label{
@@ -167,14 +168,13 @@ body {
 #results{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .result{
   width: 185px;
   background-color: #1CB3C4;
-  margin-left: 10%;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin: 2% 2%;
 }
 
 .result:hover{
@@ -203,4 +203,43 @@ body {
 
 #cim{
   margin-left: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+  #search-bar-input{
+    margin-top: 0%;
+  }
+  #filterek{
+    margin-top: 10px;
+    height: 349vh;
+  }
+}
+
+@media only screen and (max-width: 861px) {
+  .container{
+    font-size: 17px;
+  }
+  .checkmark{
+    width: 19px;
+  }
+  .container .checkmark:after {
+    left: 5px;
+    top: -1px;
+  }
+  #filterek label{
+    margin-bottom: 15%;
+  }
+}
+
+@media only screen and (max-width: 546px) {
+  #filterek{
+    margin-top: 10px;
+    height: 671vh;
+  }
+}
+
+@media only screen and (max-width: 673px) {
+  #filterek label{
+    width: 68%;
+  }
 }
