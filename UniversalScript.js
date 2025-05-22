@@ -169,16 +169,57 @@ function FelkAkcSwitch(LorR){
   }
 }
 
-function closeParent(event){
-  let par = event.parentElement;
-  par.parentElement.style.opacity = "0";
+
+function openNeighbourOnHover(event, wideORsmall){
+  if (window.innerWidth > 576) {
+    let sib = event.closest("."+ wideORsmall + "ItemCard");
+    if (!sib) {
+      return;
+    }
+
+    let hovObj = sib.querySelector("."+ wideORsmall + 'ItemHoverCont')
+    if (hovObj) {
+      hovObj.style.opacity = '1';
+      hovObj.style.pointerEvents = 'auto';
+    }
+  }
 }
 
-function reopenParent(event){
-  let par = event.parentElement;
-  par.parentElement.style.opacity = "1";
+function openNeighbourOnClick(event, wideORsmall){
+  if (window.innerWidth <= 576) {
+    let sib = event.closest("."+ wideORsmall + "ItemCard");
+    if (!sib) {
+      return;
+    }
+
+    let hovObj = sib.querySelector("."+ wideORsmall + 'ItemHoverCont')
+    if (hovObj) {
+      hovObj.style.opacity = '1';
+      hovObj.style.pointerEvents = 'auto';
+    }
+  }
 }
 
+function closeParentOnClick(event){
+  if (window.innerWidth <= 576) {
+    let par = event.parentElement;
+
+    let parpar = par.parentElement;
+    if (!parpar) return;
+
+
+    parpar.style.opacity = '0';
+    parpar.style.pointerEvents = 'none';
+  }
+}
+
+
+function closeParentOnHoverOver(event){
+  if (window.innerWidth > 576) {
+    event.style.opacity = '0';
+    event.style.pointerEvents = 'none';
+  }
+}
 
 
 /* Gyutai code */
