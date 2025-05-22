@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="stylesheet" href="Universal.css">
-  <title>Játék Ajánló Oldal - Preview</title>
+  <title>GameSeeker</title>
   
 </head>
 
 <body>
     <header>
       <a href="index.html" id="headerLeft"><img src="images/logo.png" alt="GameSeeker Logó"></a>
-      
       <div class="navTarto" onclick="location.href='Osszehasonlitas.html';" style="cursor: pointer;">
           <a href="Osszehasonlitas.html" class="navGombok">Összehasonlító</a>
       </div>
@@ -28,7 +27,6 @@
       <div class="navTarto" onclick="location.href='Kereso.html';" style="cursor: pointer;">
           <a href="index.html" class="navGombok">Kereső</a>
       </div>
-
       <div id="overlayMD">
           <div id="overlayMDPaused" onclick="OpenCloseMDSMMenu()">
               <img id="overlayPauseLines" src="images/PauseLines.svg" alt="Leállítást jelző vonalak">
@@ -42,7 +40,6 @@
               <a href="Osszehasonlitas.html" class="overlayButton">Összehasonlító</a>
           </div>
       </div>
-
       <div id="overlaySM">
           <div id="overlaySMPaused" onclick="OpenCloseMDSMMenu()">
               <img id="overlayPauseLinesSM" src="images/PauseLines.svg" alt="Leállítást jelző vonalak">
@@ -55,16 +52,13 @@
               <a href="Osszehasonlitas.html" class="overlayButtonSM">Összehasonlító</a>
           </div>
       </div>
-
       <button id="opencloseOverlay" onclick="OpenCloseMDSMMenu()">
           <img id="opencloseOverlaySVG" src="images/menu-symbol-of-three-parallel-lines.svg" alt="3 vonal">
       </button>
-
       <button id="opencloseOverlaySM" onclick="OpenCloseMDSMMenu()">
           <img id="opencloseOverlaySVG_SM" src="images/down-arrow-one.svg" alt="Lefele nyíl">
       </button>
   </header>
-
 
 
     <section class="search-bar-section">
@@ -74,76 +68,40 @@
     </div>
     </section>
     
-  
 
   <main>
     <section class="main-section">
-      <div class="mid-div">
-      <div class="mid-div-right-img"> 
-
-      <div class="tutorial-parent">
-          
-        
-        
-          <div class="grid-bal"> 
-          <img src="images/Group 162.svg" id="mid-section-img" alt="" style="height: 800px;">
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <div class="gombok_div">
-            <button onclick="changeImage(1)" class="gombok" id="felso_gomb"><p class="gombok-p">Ajánlatok</p></button>
-            <button onclick="changeImage(2)" class="gombok"><p class="gombok-p">Pörgető</p></button>
-            <button onclick="changeImage(3)" class="gombok"><p class="gombok-p">Összehasonlító</p> </button>
-            <button onclick="changeImage(4)" class="gombok" id="also_gomb"><p class="gombok-p">Könyvtár</p></button>
-          
-          
-          </div>
-        </div>
-
-          
-        
-        <div class="grid-jobb">  <iframe id="iframe-kep"  src="Osszehasonlitas.html" frameborder="0" scrolling="no"></iframe>  </div> 
-        <script>
-            
-        </script>  
       
-      </div>
-        <!--<div class="grid-jobb">       <img id="image-js-smth" src="images/proba_kep1.png" style="height:597.75px; width: 679.125px; border: 6px solid #1CB3C4; "  > -->
-        </div>
-        </div>
-
-    </div>
-      </div>
-    </section>
-    <!--    <section class="recommended-section">
-      <h2>Ajánlatok</h2>
-      <div class="recommended-grid">
-
-          <div class="game-thumb"><img src="images/ajanlatok-1.png" alt=""></div>
-          <div class="game-thumb"><img src="images/ajanlatok-2.png" alt=""></div>
-          <div class="game-thumb"><img src="images/ajanlatok-3.png" alt=""></div>
-          <div class="game-thumb"><img src="images/ajanlatok-4.png" alt=""></div>
-          <div class="game-thumb"><img src="images/ajanlatok-5.png" alt=""></div>
-          <div class="game-thumb"><img src="images/ajanlatok-6.png" alt=""></div>
-          <div class="game-thumb"><img src="images/ajanlatok-7.png" alt=""></div>
-          <div class="game-thumb"><img src="images/ajanlatok-8.png" alt=""></div>
         
-      </div>
+          <div class="tutorial-parent">
+            <div class="grid-bal"> 
+              <div class="button-wrapper" style="position: relative;">
+                <img src="images/Group 162.svg" id="mid-section-img" alt="" >
+                <img src="images/msimgMD-placeholder.png" id="mid-section-img2" alt="">
+                <img src="images/msimgMOB-placeholder.png" id="mid-section-img3" alt="">
+            
+            
+            
+                <div class="gombok_div">
+                <button onclick="changeImage(1)" class="gombok" id="felso_gomb"><p class="gombok-p">Ajánlatok</p></button>
+                <button onclick="changeImage(2)" class="gombok"><p class="gombok-p">Pörgető</p></button>
+                <button onclick="changeImage(3)" class="gombok"><p class="gombok-p">Összehasonlító</p> </button>
+                <button onclick="changeImage(4)" class="gombok" id="also_gomb"><p class="gombok-p">Könyvtár</p></button>
+                </div>
+              </div>
+            </div> <!--grid-bal záró tag-->
+
+            <div class="grid-jobb">
+              <div class="iframe-wrapper" style="position: relative;" >
+                <iframe id="iframe-kep"  src="Ajanlatok.html" frameborder="0" scrolling="no" ></iframe>
+                <div id="iframe-overlay">
+                </div>
+              </div>
+            </div> <!--grid-jobb záró tag-->
+          </div> <!--tutorial-parent záró-->
+        
+      
     </section>
-
-    game-item
-    -->
-
-
 
     <section class="recommended-section">
       <p id="ajanlatok">Ajánlatok</p>
@@ -157,6 +115,7 @@
           <div class="game-item"><img src="images/ajanlatok-6.png" alt=""></div>
           <div class="game-item"><img src="images/ajanlatok-7.png" alt=""></div>
           <div class="game-item"><img src="images/ajanlatok-8.png" alt=""></div>
+          <div class="game-item" id="game-item-3x3"><img src="images/satisfactory.jpg" alt=""></div>
       </div>
       
     </section>
@@ -171,15 +130,33 @@
 
 
     <section class="filter-section">
-      <button class="filter-button">További szűrők alkalmazása</button>
+      <a href="Kereso.html">
+        <button class="filter-button">További szűrők alkalmazása</button>
+      </a>
+      
       <div class="tags">
-        <div class="tag">RPG</div>
-        <div class="tag">Roguelike</div>
-        <div class="tag">Multiplayer</div>
-        <div class="tag">Akció</div>
-        <div class="tag">Legkelendőbb</div>
-        <div class="tag">Singleplayer</div>
-        <div class="tag">Stratégia</div>
+        
+        <a href="Kereso.html" class="tag-button-link">
+          <div class="tag">RPG</div>
+        </a>
+        <a href="Kereso.html" class="tag-button-link">
+          <div class="tag">Roguelike</div>
+        </a>
+        <a href="Kereso.html" class="tag-button-link">
+          <div class="tag">Multiplayer</div>
+        </a>
+        <a href="Kereso.html" class="tag-button-link">
+          <div class="tag">Akció</div>
+        </a>
+        <a href="Kereso.html" class="tag-button-link">
+          <div class="tag">Legkelendőbb</div>
+        </a>
+        <a href="Kereso.html" class="tag-button-link">
+          <div class="tag">Singleplayer</div>
+        </a>
+        <a href="Kereso.html" class="tag-button-link">
+          <div class="tag">Stratégia</div>
+        </a>
       </div>
     </section>
   </main>
