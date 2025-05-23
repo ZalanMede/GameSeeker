@@ -327,7 +327,7 @@ body {
 
 .smallItemHoverCont .smallItemHoverImg {
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
   aspect-ratio: 4 / 4;
   border-radius: 6px;
 }
@@ -389,7 +389,7 @@ body {
 
 .smallItemBtn{
   border: none;
-  background-color: #1CB3C4;
+  background-color: #FFCF6B;
   color: black;
   font-size: 25px;
   font-family: "Jersey 10", serif;
