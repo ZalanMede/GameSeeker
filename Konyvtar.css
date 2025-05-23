@@ -161,7 +161,8 @@ body {
     }
     
     .div2 { grid-area: 1 / 1 / 6 / 4; }
-    .div1 { grid-area: 1 / 4 / 6 / 5; }
+    .div1 { grid-area: 1 / 4 / 6 / 5; 
+        height: 400vh;}
             
         
         
@@ -207,7 +208,7 @@ body {
   }
   #filterek{
     margin-top: 10px;
-    height: 363vh;
+    height: 399vh;
   }
 }
 
@@ -245,3 +246,177 @@ body {
     display: none;
   }
 }
+
+.smallColumnCont{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 3vw;
+  margin: 0 auto;
+  width: 95%;
+  position: relative;
+}
+
+.smallItemCard {
+  position: relative;
+  width: 25%;
+  aspect-ratio: 4 / 4;
+  margin: 2% 2%;
+}
+
+.smallItemImg {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  border-radius: 6px;
+  aspect-ratio: 4 / 4;
+  opacity: 1;
+}
+
+.smallItemBaseCont{
+  background-color: rgb(97, 97, 252);
+  border-radius: 6px;
+}
+
+.smallItemTextName{
+  position: absolute;
+  bottom: -1vh;
+  left: 3%;
+  color: black;
+  font-size: 2vw;
+}
+
+.smallItemTextPrice{
+  position: absolute;
+  bottom: -1vh;
+  right: 3%;
+  color: black;
+  font-size: 2vw;
+}
+
+.smallItemTextCont{
+  position: absolute;
+  bottom: 0vh;
+  left: 0;
+  color: white;
+  font-size: 2vw;
+  background: #1CB3C4;
+  height: 20%;
+  width: 100%;
+}
+
+/* Small Hover stuff */
+
+.smallItemHoverCont {
+  position: absolute;
+  top: -5px;
+  left: -0.8vw;
+  right: -0.8vw;
+  bottom: auto;
+  background-color: #090935;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.smallItemHoverCont .smallItemHoverImg {
+  width: 100%;
+  object-fit: fill;
+  aspect-ratio: 4 / 4;
+  border-radius: 6px;
+}
+
+.smallItemHoverCont p {
+  margin-top: 20px;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 0;
+}
+
+.smallHoverTextCont{
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 95%;
+}
+
+.smallHoverRowNameAndPrice{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 12px 0 0 0;
+}
+
+.smallHoverRowNameAndPrice p {
+  line-height: 15px;
+  margin: 7px 0 0 0;
+  text-align: start;
+}
+
+.smallItemStarText{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 5px;
+}
+
+.smallItemStarText > p{
+  line-height: 0;
+  margin: 0 5px 0 10px;
+  font-weight: 100;
+}
+
+.smallItemStar{
+  width: 15%;
+  height: 15%;
+}
+
+.smallItemFilterCont p{
+  text-align: start;
+  margin: 1vh auto 1vh auto;
+  font-size: large;
+  line-height: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.smallItemBtn{
+  border: none;
+  background-color: #1CB3C4;
+  color: black;
+  font-size: 25px;
+  font-family: "Jersey 10", serif;
+  width: 80%;
+  height: 50px;
+  margin: 5px auto;
+  cursor: pointer;
+}
+
+.smallItemCard:hover .smallItemHoverCont, .smallItemHoverCont:hover .smallItemHoverCont{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 480px) {
+  .smallItemHoverCont {
+  top: -2vh;
+  bottom: -2vh;
+  left: -3vw;
+  right: -3vw;
+  padding: 5px 40px;
+}
+
+  .smallItemHoverCont p {
+  font-size: 0.95rem;
+}
+}
+
