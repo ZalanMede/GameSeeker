@@ -785,6 +785,10 @@ ol, li {
 
     /* Small Items */
 
+    .smallItemBaseCont{
+        opacity: 0;
+    }
+
     .smallItemHoverCont{
         padding: 0;
         opacity: 1;
@@ -800,6 +804,7 @@ ol, li {
         background: #16688D;
         background: linear-gradient(90deg,rgba(22, 104, 141, 1) 0%, rgba(233, 101, 89, 1) 100%);
         padding: 5%;
+        scroll-snap-type: x mandatory;
     }
 
     .smallColumnCont::-webkit-scrollbar{
