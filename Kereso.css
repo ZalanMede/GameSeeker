@@ -160,9 +160,8 @@ body {
     
     .div1 { grid-area: 1 / 1 / 6 / 2; }
     .div2 { grid-area: 1 / 2 / 6 / 5; 
-    height: 420vh;
+            height: 300vh;
     }
-
 
 
 #results{

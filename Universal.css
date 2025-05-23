@@ -127,6 +127,12 @@ header{
     background-color: #1CB3C4;
 }
 
+.navTarto:hover{
+  box-shadow: 3px 3px 2px 0px rgba(255,255,255,0.74);
+  -webkit-box-shadow: 3px 3px 2px 0px rgba(255,255,255,0.74);
+  -moz-box-shadow: 3px 3px 2px 0px rgba(255,255,255,0.74);
+}
+
 #headerLeft > img{
     width: 4vh;
     background-color: #30FFC9;
@@ -187,6 +193,16 @@ header{
   color: black;
   display: block;
   transition: 0.3s;
+}
+
+.overlayButton, .overlayButtonSM{
+  box-shadow: 7px 6px 21px 0px rgba(28,179,196,0.75);
+  -webkit-box-shadow: 7px 6px 21px 0px rgba(28,179,196,0.75);
+  -moz-box-shadow: 7px 6px 21px 0px rgba(28,179,196,0.75);
+}
+
+.overlayButton:hover, .overlayButtonSM:hover{
+  box-shadow: none;
 }
 
 #overlayMDPaused{
