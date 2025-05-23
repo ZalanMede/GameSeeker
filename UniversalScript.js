@@ -6,6 +6,7 @@ let openSpec = true;
 let switchOnL = true;
 let swapOnL = true;
 window.onscroll = function() {scrollFunction()};
+
 window.onresize = function() {resetHoversSM()};
 
 function scrollFunction() {
@@ -23,10 +24,14 @@ function scrollToTop() {
 
 
 function resetHoversSM(){
-  if (document.documentElement.clientWidth < 576) {
-    let el = document.getElementsByClassName("smallItemHoverCont");
-    for (let i = 0; i < el.length; i++) {
-      el[i].style.opacity = '1';
+  let path = window.location.pathname;
+  let page = path.split("/").pop();
+  if (page == "Ajanlatok.html") {
+      if (document.documentElement.clientWidth < 576) {
+      let el = document.getElementsByClassName("smallItemHoverCont");
+      for (let i = 0; i < el.length; i++) {
+        el[i].style.opacity = '1';
+      }
     }
   }
 }
@@ -231,6 +236,24 @@ function closeParentOnHoverOver(event){
   if (window.innerWidth > 576) {
     event.style.opacity = '0';
     event.style.pointerEvents = 'none';
+  }
+}
+
+// Boti code (not rly haha)
+
+function revealFilter(){
+  let element = document.getElementsByClassName("div1");
+
+  for (let i = 0; i < element.length; i++){
+    element[i].style.display = 'grid';
+  }
+}
+
+function hideFilter(){
+  let element = document.getElementsByClassName("div1");
+
+  for (let i = 0; i < element.length; i++){
+    element[i].style.display = 'none';
   }
 }
 
