@@ -28,12 +28,11 @@ body{
 
 #kerek{
   margin-top: 0vh;
-  width: 55%;
+  width: 60%;
   height: auto;
   z-index: 1;
   position: absolute;
-  margin-left: 45%;
-
+  right: 20%;
 }
 
 #porgetes-btn{
@@ -42,7 +41,7 @@ body{
     font-size: 25pt;
     background: linear-gradient(180deg, rgba(233, 101, 89, 1) 50%, rgba(54, 17, 60, 1) 100%);
     border: none;
-    margin-top: 45vh;
+    margin-top: 37vh;
     margin-left: 10vw;
 }
 #porgetes-btn:hover{
@@ -131,4 +130,18 @@ aside{
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+  }
+
+
+
+
+
+
+
+
+
+  .button-wrapper {
+    position: relative;
+    width: 100%; /* fontos, hogy a grid kitöltésében benne maradjon */
+    height: auto;
   }
