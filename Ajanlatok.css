@@ -28,15 +28,21 @@ body{
 
 /* Carousel kód */
 
+#snap1, #snap2, #snap3{
+    position: absolute;
+    top: -5%;
+    left: 50%;
+}
+
 ol, li {
     list-style: none;
     margin: 5px;
-    padding: 0;
+    padding: 5px;
 }
 
 #carouselContainer {
     position: relative;
-    padding-top: 75%;
+    padding-top: 50%;
     filter: drop-shadow(0 0 10px #0003);
     perspective: 100px;
 }
@@ -54,24 +60,22 @@ ol, li {
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     width: 80%;
-    height: 55%;
+    height: 75%;
     box-sizing: border-box;
-    scrollbar-color: transparent transparent; /* thumb and track color */
-    scrollbar-width: 0px;
+    scrollbar-width: none;
 }
 
   
 .carViewPort::-webkit-scrollbar {
-    width: 0;
+    display: none;
 }
 
 .carViewPort::-webkit-scrollbar-track {
-    background: transparent;
+    display: none;
 }
 
 .carViewPort::-webkit-scrollbar-thumb {
-    background: transparent;
-    border: none;
+    display: none;
 }
 
 .carSlide {
@@ -129,9 +133,15 @@ ol, li {
 }
 
 .carNav {
+    top: 5vh;
     position: relative;
     width: 100%;
     text-align: center;
+}
+
+.carNavList{
+    border-radius: 50px;
+    background: #16688D;
 }
 
 .carNavList, .carNavItem {
@@ -543,21 +553,25 @@ ol, li {
     cursor: pointer;
 }
 
+.wideItemBtn:hover, .smallItemBtn:hover{
+    box-shadow: inset 0 0 0.55em 0em black;
+    border-color: black;
+    color: white;
+    cursor: pointer;
+}
+
 @media (max-width: 480px) {
-    .wideItemHoverCont {
-        top: -2vh;
-        bottom: -2vh;
-        left: -3vw;
-        right: -3vw;
-        padding: 5px 40px;
+    .wideItemHoverCont p {
+        font-size: 6vw;
     }
 
-    .wideItemHoverCont p {
-        font-size: 0.95rem;
+    .smallColumnCont{
+        gap: 0;
+        margin: 6vh 0;
     }
 
     .smallItemCard {
-        width: 80vw;
+        width: 70vw;
         aspect-ratio: 1 / 1;
         height: auto;
         min-height: 180px;
@@ -588,6 +602,26 @@ ol, li {
 /* MD nézet */
 
 @media screen and (max-width: 768px){
+    /* Carousel */
+
+    #snap1, #snap2, #snap3{
+        top: -100%;
+    }
+    
+    .carViewPort{
+        width: 90%;
+        height: 85%;
+    }
+
+    .carNav{
+        top: 6vh
+    }
+
+    .carNavButton{
+        width: 5rem;
+        height: 1.5rem;
+        border-radius: 15px;
+    }
 
     /* Wide Item */
 
@@ -599,31 +633,6 @@ ol, li {
         flex-direction: column;
         width: 5%;
         text-align: start;
-    }
-
-    #wideSwitchMDSM{
-        border: solid 15px #1A0935;
-        border-bottom: 0;
-        display: flex;
-        flex-direction: row;
-        width: 90%;
-        height: 5%;
-    }
-
-    #wideSwitchL, #wideSwitchR{
-        width: 50%;
-        margin: 0;
-        padding: 0;
-    }
-
-    #wideSwitchR{
-        cursor: pointer;
-    }
-
-    #wideSwitchMDSM > div > p{
-        font-size: 7vw;
-        color: white;
-        text-align: center;
     }
 
     .wideColumnCont{
@@ -714,6 +723,36 @@ ol, li {
 
     /* For JS */
 
+    #wideSwitchMDSM{
+        background: #1A0935;
+        border: solid 15px #1A0935;
+        border-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        height: 5%;
+    }
+
+    #wideSwitchL, #wideSwitchR{
+        border-radius: 25px;
+        width: 50vw;
+        margin: 5px;
+        padding: 35px;
+        overflow: hidden;
+        border: none;
+        background: none;
+    }
+
+    #wideSwitchR{
+        cursor: pointer;
+    }
+
+    #wideSwitchMDSM > button > span{
+        font-size: 7vw;
+        text-align: center;
+    }
+
+
     .wideColumnCont h1, #rightWideCont{
         display: none;
     }
@@ -722,13 +761,91 @@ ol, li {
         display: flex;
     }
 
-    #wideSwitchL{
-        background: #1A0935;
+    
+    .activeAnimL{
+        background: #4152BA !important;
+        border-color: white;
+        color: #fff !important;
+        overflow: hidden;
+        &::before,
+        &::after {
+            height: 5%;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            transform: translateX(100%) skewX(-15deg);
+            content: "";
+        }
+        &::before {
+            width: 60px;
+            background: rgba(26, 9, 53, 0.5);
+            filter: blur(30px);
+            opacity: 0.5;
+        }
+        &::after {
+            width: 30px;
+            left: 30px;
+            background: rgba(26, 9, 53, 0.8);
+            filter: blur(50px);
+        }
+        &:hover {
+            background-color: #23BBFF !important;
+            border-color: black;
+            color: black !important;
+            &::before {
+            opacity: 1;
+            }
+            &::before,
+            &::after {
+            transform: translateX(45vw) skewX(-15deg);
+            transition: all 0.1s ease;
+            }
+
+        }
     }
 
-    #wideSwitchR{
-        background: #23BBFF;
+    .activeAnimR{
+        background:  #4152BA !important;
+        border-color: white;
+        color: #fff !important;
+        overflow: hidden;
+        &::before,
+        &::after {
+            height: 5%;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            transform: translateX(50vw) skewX(0deg);
+            content: "";
+        }
+        &::before {
+            width: 60px;
+            background: rgba(26, 9, 53, 0.3);
+            filter: blur(30px);
+            opacity: 0.5;
+        }
+        &::after {
+            width: 30px;
+            left: 30px;
+            background: rgba(26, 9, 53, 0.8);
+            filter: blur(35px);
+        }
+        &:hover {
+            background-color: #23BBFF !important;
+            border-color: black;
+            color: black !important;
+            &::before {
+            opacity: 1;
+            }
+            &::before,
+            &::after {
+            transform: translateX(85vw) skewX(-5deg);
+            transition: all 0.1s ease;
+            }
+
+        }
     }
+
 }
 
 
@@ -767,6 +884,27 @@ ol, li {
         cursor: pointer;
     }
 
+    /* Carousel */
+
+    #carouselContainer{
+        padding-top: 20%;
+    }
+    
+    .carViewPort{
+        width: 100%;
+        height: 80%;
+    }
+
+    .carNav{
+        top: 30vh;
+        margin: 25vh auto;
+    }
+
+    .carNavButton{
+        width: 4rem;
+        height: 3rem;
+        border-radius: 15px;
+    }
 
     #wideSwitchMDSM{
         flex-direction: column-reverse;
@@ -795,6 +933,7 @@ ol, li {
     }
 
     .smallColumnCont{
+        left: -10%;
         overflow-x: scroll;
         overflow-y: hidden;
         width: 90%;
@@ -803,7 +942,7 @@ ol, li {
         scrollbar-width: none;
         background: #16688D;
         background: linear-gradient(90deg,rgba(22, 104, 141, 1) 0%, rgba(233, 101, 89, 1) 100%);
-        padding: 5%;
+        padding: 10%;
         scroll-snap-type: x mandatory;
     }
 
@@ -816,6 +955,13 @@ ol, li {
         min-width: 40vh;
         height: 98%;
         margin: 0 15px;
+        display: flex;
+        opacity: 1;
+    }
+
+    
+    #lastSmallCard{
+        display: flex;
     }
     
     .smallHoverTextCont{
@@ -851,10 +997,59 @@ ol, li {
 
     /* Wide Items */
 
+    #wideSwitchL, #wideSwitchR{
+        margin: 0;
+        padding: 15px 1px;
+        border-radius: 0;
+    }
+
+    .activeAnimR, .activeAnimL{
+        background:  #4152BA !important;
+        border-color: white;
+        color: #fff !important;
+        overflow: hidden;
+        &::before,
+        &::after {
+            height: 2%;
+            position: absolute;
+            top: 3vh;
+            left: 0;
+            transform: translateX(0%) skewX(0deg);
+            content: "";
+        }
+        &::before {
+            width: 65px;
+            background: rgba(26, 9, 53, 0.8);
+            filter: blur(30px);
+            opacity: 0.5;
+        }
+        &::after {
+            width: 15px;
+            left: 0px;
+            background: rgba(26, 9, 53, 0.8);
+            filter: blur(35px);
+        }
+        &:hover {
+            background-color: #23BBFF !important;
+            border-color: black;
+            color: black !important;
+            &::before {
+            opacity: 1;
+            }
+            &::before,
+            &::after {
+            transform: translateX(78vw) skewX(0deg);
+            transition: all 0.1s ease;
+            }
+
+        }
+    }
+
     .wideItemCont{
         width: 100%;
         border: none;
         border-radius: 0;
         margin-bottom: 20vh;
+        padding-bottom: 5%;
     }
 }

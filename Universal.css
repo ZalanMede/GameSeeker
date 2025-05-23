@@ -44,6 +44,7 @@ body{
   bottom: 2vh;
   right: 2vw;
   border: none;
+  z-index: 999999;
 }
   
 #arrow path {

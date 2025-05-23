@@ -6,6 +6,7 @@ let openSpec = true;
 let switchOnL = true;
 let swapOnL = true;
 window.onscroll = function() {scrollFunction()};
+window.onresize = function() {resetHoversSM()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -17,6 +18,17 @@ function scrollFunction() {
 
 function scrollToTop() {
     window.scrollTo(0, 0);
+}
+
+
+
+function resetHoversSM(){
+  if (document.documentElement.clientWidth < 576) {
+    let el = document.getElementsByClassName("smallItemHoverCont");
+    for (let i = 0; i < el.length; i++) {
+      el[i].style.opacity = '1';
+    }
+  }
 }
 
 
@@ -137,12 +149,12 @@ function SwitchLeftToRight(LorR) {
 function FelkAkcSwitch(LorR){
   if (swapOnL && LorR == 'R') {
     document.getElementById("leftWideCont").style.display = "none";
-    document.getElementById("wideSwitchL").style.background = "#23BBFF";
     document.getElementById("wideSwitchL").style.cursor = "pointer"
+    document.getElementById("wideSwitchL").classList = "activeAnimL";
 
     document.getElementById("rightWideCont").style.display = "flex";
-    document.getElementById("wideSwitchR").style.background = "#1A0935";
     document.getElementById("wideSwitchR").style.cursor = "default"
+    document.getElementById("wideSwitchR").classList.remove("activeAnimR");
 
     if (window.innerWidth < 576) {
       document.getElementById("wideSwitchR").style.order = 0;
@@ -153,12 +165,13 @@ function FelkAkcSwitch(LorR){
   }
   else if(!swapOnL && LorR == 'L'){
     document.getElementById("leftWideCont").style.display = "flex";
-    document.getElementById("wideSwitchL").style.background = "#1A0935";
     document.getElementById("wideSwitchL").style.cursor = "default"
+    document.getElementById("wideSwitchL").classList.remove("activeAnimL");
 
     document.getElementById("rightWideCont").style.display = "none";
-    document.getElementById("wideSwitchR").style.background = "#23BBFF";
     document.getElementById("wideSwitchR").style.cursor = "pointer"
+    document.getElementById("wideSwitchR").classList = "activeAnimR";
+    
 
     if (window.innerWidth < 576) {
       document.getElementById("wideSwitchR").style.order = 1;

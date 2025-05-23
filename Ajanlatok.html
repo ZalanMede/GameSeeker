@@ -71,6 +71,7 @@
         <ol class="carViewPort">
             <li id="carSlide1" index="0" class="carSlide">
                 <div class="carSnapper">
+                    <div id="snap1"></div>
                     <a href="carSlide3" class="carPrev">
                         Go to Previous Slide
                     </a>
@@ -82,6 +83,7 @@
 
             <li id="carSlide2" index="1" class="carSlide">
                 <div class="carSnapper">
+                    <div id="snap2"></div>
                     <a href="carSlide1" class="carPrev">
                         Go to Previous Slide
                     </a>
@@ -93,6 +95,7 @@
 
             <li id="carSlide3" index="2" class="carSlide">
                 <div class="carSnapper">
+                    <div id="snap3"></div>
                     <a href="carSlide2" class="carPrev">
                         Go to Previous Slide
                     </a>
@@ -106,13 +109,13 @@
         <aside class="carNav">
             <ol class="carNavList">
                 <li class="carNavItem">
-                    <a href="#carSlide1" class="carNavButton">⬤</a>
+                    <a href="#snap1" class="carNavButton">⬤</a>
                 </li>
                 <li class="carNavItem">
-                    <a href="#carSlide2" class="carNavButton">⬤</a>
+                    <a href="#snap2" class="carNavButton">⬤</a>
                 </li>
                 <li class="carNavItem">
-                    <a href="#carSlide3" class="carNavButton">⬤</a>
+                    <a href="#snap3" class="carNavButton">⬤</a>
                 </li>
             </ol>
         </aside>
@@ -235,8 +238,8 @@
             </div>
         </div>
 
-        <div class="smallItemCard">
-            <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" >
+        <div class="smallItemCard" id="lastSmallCard">
+            <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')">
                 <img class="smallItemImg" src="images/Balatro.png" alt="Balatro">
                 <p class="smallItemTextName">Phasmophobia</p>
                 <p class="smallItemTextPrice">999.99</p>
@@ -271,12 +274,12 @@
     <section class="wideColumnCont">
 
         <div id="wideSwitchMDSM">
-            <div id="wideSwitchL" onclick="FelkAkcSwitch('L')">
-                <p>Felkapott</p>
-            </div>
-            <div id="wideSwitchR" onclick="FelkAkcSwitch('R')">
-                <p>Akciós</p>
-            </div>
+            <button id="wideSwitchL" onclick="FelkAkcSwitch('L')">
+                <span>Felkapott</span>
+            </button>
+            <button id="wideSwitchR" class="activeAnimR" onclick="FelkAkcSwitch('R')">
+                <span>Akciós</span>
+            </button>
         </div>
 
 
@@ -286,7 +289,7 @@
                 <div class="wideItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'wide')" onclick="openNeighbourOnClick(this, 'wide')">
                     <img class="wideItemImg" src="images/Balatro.png" alt="Balatro">
                     <div class="wideItemBaseTxt">
-                        <p class="wideItemTextName">Phasmophobia</p>
+                        <p class="wideItemTextName">Column1</p>
                         <p class="wideItemTextPrice">999.99</p>
                     </div>
                 </div>
@@ -669,13 +672,17 @@
 
         </div>
 
+
+        <!-- A másik oldal -->
+
+
         <div class="wideItemCont" id="rightWideCont">
             <h1>Akciós</h1>
             <div class="wideItemCard">
                  <div class="wideItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'wide')" onclick="openNeighbourOnClick(this, 'wide')">
                     <img class="wideItemImg" src="images/Balatro.png" alt="Balatro">
                     <div class="wideItemBaseTxt">
-                        <p class="wideItemTextName">Phasmophobia</p>
+                        <p class="wideItemTextName">Column2</p>
                         <p class="wideItemTextPrice">999.99</p>
                     </div>
                 </div>
