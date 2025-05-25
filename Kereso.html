@@ -67,8 +67,14 @@
 
 
         <div class="parent">
-            <div class="div1"> <aside id="filterek">
-                <h2>Filterek</h2>
+            <div class="div1"> 
+                <aside id="filterek">
+                    <div id="filterCont">
+                            <button id="filterBtnClose" onclick="hideFilter()">
+                                <img src="images/filter.svg" alt="Filter ikon">
+                            </button>
+                            <h2>Filterek</h2> 
+                    </div>
                 <div>
                     <label class="container">Ingyenes<input type="checkbox" checked="checked">
                     <span class="checkmark"></span></label>
@@ -168,25 +174,26 @@
                     <span class="checkmark" ></span></label>
                 </div>
             </aside></div>
-            <section class="div2"> 
-                <div class="search-bar"> 
-                <input type="text" id="search-bar-input" name="search-bar-input">
+            <section class="div2">
+                <div class="search-bar">
+                    <button id="filterBtn" onclick="revealFilter()">
+                        <img src="images/filter.svg" alt="Filter ikon">
+                    </button>
+                    <input type="text" id="search-bar-input" name="search-bar-input">
                 </div>
-                
                 <div id="results">
-
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/dota.jpg" alt="Dota 2">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Dota 2</p>
                                 <p class="smallItemTextPrice">FREE</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/dota.jpg" alt="Dota 2">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Dota 2</p>
                                     <p>FREE</p>
@@ -199,7 +206,7 @@
                                     <p>4.5 / 5</p>
                                 </div>
                                 <div class="smallItemFilterCont">
-                                    <p>Ingyenes, Multiplayer, Stratégia, Akció, Együttműködő, RPG, Toronyvédős </p>
+                                    <p>Ingyenes, Multiplayer, Stratégia, Akció, Együttműködő, RPG, Toronyvédős, </p>
                                 </div>
                                 <button class="smallItemBtn" href="Konyvtar.html">Könyvtárba</button>
                             </div>
@@ -207,17 +214,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/stardew.png" alt="Stardew Valley">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Stardew Valley</p>
                                 <p class="smallItemTextPrice">13,99€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/stardew.png" alt="Stardew Valley">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Stardew Valley</p>
                                     <p>13,99€</p>
@@ -238,17 +245,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/wand.jpg" alt="W.A.N.D. Project">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">W.A.N.D. Project</p>
                                 <p class="smallItemTextPrice">6,33€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/wand.jpg" alt="W.A.N.D. Project">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>W.A.N.D. Project</p>
                                     <p>6,33€</p>
@@ -269,17 +276,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/rust.jpg" alt="Rust">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Rust</p>
                                 <p class="smallItemTextPrice">39,99€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/rust.jpg" alt="Rust">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Rust</p>
                                     <p>39,99€</p>
@@ -300,17 +307,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/hollow.png" alt="Hollow Knight">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Hollow Knight</p>
                                 <p class="smallItemTextPrice">14,79€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/hollow.png" alt="Hollow Knight">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Hollow Knight</p>
                                     <p>14,79€</p>
@@ -331,17 +338,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/beat.png" alt="Beat Saber">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Beat Saber</p>
                                 <p class="smallItemTextPrice">29,99€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/beat.png" alt="Beat Saber">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Beat Saber</p>
                                     <p>29,99€</p>
@@ -362,17 +369,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/lost.jpg" alt="Lost Ark">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Lost Ark</p>
                                 <p class="smallItemTextPrice">FREE</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/lost.jpg" alt="Lost Ark">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall fekete_x" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Lost Ark</p>
                                     <p>FREE</p>
@@ -393,17 +400,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/resident.png" alt="Resident Evil 4">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Resident Evil 4</p>
                                 <p class="smallItemTextPrice">39,99€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/resident.png" alt="Resident Evil 4">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Resident Evil 4</p>
                                     <p>39,99€</p>
@@ -424,17 +431,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/wuther.jpg" alt="Wuthering Waves">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Wuthering Waves</p>
                                 <p class="smallItemTextPrice">FREE</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/wuther.jpg" alt="Wuthering Waves">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Wuthering Waves</p>
                                     <p>FREE</p>
@@ -455,17 +462,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/once.jpg" alt="Once Human">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Once Human</p>
                                 <p class="smallItemTextPrice">FREE</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/once.jpg" alt="Once Human">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Once Human</p>
                                     <p>FREE</p>
@@ -486,17 +493,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/over.jpg" alt="Overwatch 2">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Overwatch 2</p>
                                 <p class="smallItemTextPrice">FREE</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/over.jpg" alt="Overwatch 2">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall fekete_x" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Overwatch 2</p>
                                     <p>FREE</p>
@@ -517,17 +524,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/marvel.jpg" alt="MARVEL SNAP">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">MARVEL SNAP</p>
                                 <p class="smallItemTextPrice">FREE</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/marvel.jpg" alt="MARVEL SNAP">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>MARVEL SNAP</p>
                                     <p>FREE</p>
@@ -548,17 +555,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/supervive.jpg" alt="SUPERVIVE">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">SUPERVIVE</p>
                                 <p class="smallItemTextPrice">FREE</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/supervive.jpg" alt="SUPERVIVE">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>SUPERVIVE</p>
                                     <p>FREE</p>
@@ -579,17 +586,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/geometry.jpg" alt="Geometry Dash">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Geometry Dash</p>
                                 <p class="smallItemTextPrice">4,99€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/geometry.jpg" alt="Geometry Dash">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Geometry Dash</p>
                                     <p>4,99€</p>
@@ -610,17 +617,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/elden.jpg" alt="ELDEN RING">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">ELDEN RING</p>
                                 <p class="smallItemTextPrice">59,99€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/elden.jpg" alt="ELDEN RING">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>ELDEN RING</p>
                                     <p>59,99€</p>
@@ -641,17 +648,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/tekken.jpg" alt="TEKKEN 8">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">TEKKEN 8</p>
                                 <p class="smallItemTextPrice">48,99€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/tekken.jpg" alt="TEKKEN 8">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>TEKKEN 8</p>
                                     <p>48,99€</p>
@@ -672,17 +679,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/cyberpunk.jpg" alt="Cyberpunk 2077">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Cyberpunk 2077</p>
                                 <p class="smallItemTextPrice">23,99€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/cyberpunk.jpg" alt="Cyberpunk 2077">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall fekete_x" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Cyberpunk 2077</p>
                                     <p>23,99€</p>
@@ -703,17 +710,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/lethal.jpg" alt="Lethal Company">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Lethal Company</p>
                                 <p class="smallItemTextPrice">9,75€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/lethal.jpg" alt="Lethal Company">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Lethal Company</p>
                                     <p>9,75€</p>
@@ -734,17 +741,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/haste.jpg" alt="Haste">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Haste</p>
                                 <p class="smallItemTextPrice">15,19€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/haste.jpg" alt="Haste">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall fekete_x" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Haste</p>
                                     <p>15,19€</p>
@@ -765,17 +772,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/terraria.jpg" alt="Terraria">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Terraria</p>
                                 <p class="smallItemTextPrice">9,75€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/terraria.jpg" alt="Terraria">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Terraria</p>
                                     <p>9,75€</p>
@@ -796,17 +803,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/enshrouded.jpg" alt="Enshrouded">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Enshrouded</p>
                                 <p class="smallItemTextPrice">23,99€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/enshrouded.jpg" alt="Enshrouded">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Enshrouded</p>
                                     <p>23,99€</p>
@@ -827,17 +834,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/spore.jpg" alt="SPORE">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">SPORE</p>
                                 <p class="smallItemTextPrice">19,99€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/spore.jpg" alt="SPORE">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>SPORE</p>
                                     <p>19,99€</p>
@@ -858,17 +865,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/pseudoregalia.jpg" alt="Pseudoregalia">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Pseudoregalia</p>
                                 <p class="smallItemTextPrice">4,71€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/pseudoregalia.jpg" alt="Pseudoregalia">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall fekete_x" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Pseudoregalia</p>
                                     <p>4,71€</p>
@@ -889,17 +896,17 @@
                     </div>
 
                     <div class="smallItemCard">
-                        <div class="smallItemBaseCont" onclick="openChild()">
+                        <div class="smallItemBaseCont" onmouseenter="openNeighbourOnHover(this, 'small')" onclick="openNeighbourOnClick(this, 'small')">
                             <img class="smallItemImg" src="images/witch.jpg" alt="Witch It">
                             <div class="smallItemTextCont">
                                 <p class="smallItemTextName">Witch It</p>
                                 <p class="smallItemTextPrice">3,99€</p>
                             </div>
                         </div>
-                        <div class="smallItemHoverCont">
+                        <div class="smallItemHoverCont" onmouseleave="closeParentOnHoverOver(this)">
                             <img class="smallItemHoverImg" src="images/witch.jpg" alt="Witch It">
                             <div class="smallHoverTextCont">
-                                <button class="closeBtnSmall" onclick="closeParent(this)">X</button>
+                                <button class="closeBtnSmall" onclick="closeParentOnClick(this)">X</button>
                                 <div class="smallHoverRowNameAndPrice">
                                     <p>Witch It</p>
                                     <p>3,99€</p>
@@ -918,7 +925,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
         </div>
