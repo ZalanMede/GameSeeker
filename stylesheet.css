@@ -1007,6 +1007,7 @@ body{
     display: block;
     width: 577px;
     height: 284px;
+    border-radius: 0px 0px 15px 15px;
   }
   .gombok{
     height: 62px; 
@@ -1135,6 +1136,7 @@ body{
     display: block;
     width: 500px;
     height: 260px;
+    border-radius: 0px 0px 15px 15px !important;
   }
   .gombok{
     height: 50px; 
