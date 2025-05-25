@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sorsolas.css">
-    <link rel="stylesheet" href="Universal.css">
-    <title>Sorsolás</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameSeeker - Sorsolás</title>
+  <link rel="stylesheet" href="sorsolas.css" />
+  <link rel="stylesheet" href="Universal.css">
+   <link rel="icon" type="image/png" href="images/logo.png">
 </head>
+
 <body>
     <header>
-        <a href="index.html" id="headerLeft"><img src="images/logo.png" alt="GameSeeker Logó"></a>
+<a href="index.html" id="headerLeft"><img src="images/logo.png" alt="GameSeeker Logó"></a>
 
         <div class="navTarto" onclick="location.href='Osszehasonlitas.html';" style="cursor: pointer;">
             <a href="Osszehasonlitas.html" class="navGombok">Összehasonlító</a>
@@ -26,7 +28,6 @@
         <div class="navTarto" onclick="location.href='index.html';" style="cursor: pointer;">
             <a href="index.html" class="navGombok">Főoldal</a>
         </div>
-
         <div id="overlayMD">
             <div id="overlayMDPaused" onclick="OpenCloseMDSMMenu()">
                 <img id="overlayPauseLines" src="images/PauseLines.svg" alt="Leállítást jelző vonalak">
@@ -40,7 +41,6 @@
                 <a href="Osszehasonlitas.html" class="overlayButton">Összehasonlító</a>
             </div>
         </div>
-
         <div id="overlaySM">
             <div id="overlaySMPaused" onclick="OpenCloseMDSMMenu()">
                 <img id="overlayPauseLinesSM" src="images/PauseLines.svg" alt="Leállítást jelző vonalak">
@@ -53,96 +53,49 @@
                 <a href="Osszehasonlitas.html" class="overlayButtonSM">Összehasonlító</a>
             </div>
         </div>
-
         <button id="opencloseOverlay" onclick="OpenCloseMDSMMenu()">
             <img id="opencloseOverlaySVG" src="images/menu-symbol-of-three-parallel-lines.svg" alt="3 vonal">
         </button>
-
         <button id="opencloseOverlaySM" onclick="OpenCloseMDSMMenu()">
             <img id="opencloseOverlaySVG_SM" src="images/down-arrow-one.svg" alt="Lefele nyíl">
         </button>
     </header>
 
-    
-
-    <aside>
-        <label class="container">Dota 2<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Stardew Valley<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">W.A.N.D. Project<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Rust<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Hollow Knight<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Beat Saber<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Lost Ark<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Resident Evil 4<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Wuthering Waves<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Once Human<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Overwatch 2<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">MARVEL SNAP<input type="checkbox" checked="checked">
-            <span class="checkmark" ></span></label>
-            <label class="container">SUPERVIVE<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Geometry Dash<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">ELDEN RING<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">TEKKEN 8<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Cyberpunk 2077<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Lethal Company<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Haste<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Terraria<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Enshrouded<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">SPORE<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Pseudoregalia<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-            <label class="container">Witch It<input type="checkbox" checked="checked">
-            <span class="checkmark"></span></label>
-    </aside>
-
-
-   
-            <button id="porgetes-btn">PÖRGETÉS</button>
-            <img id="kerek" src="images/Ellipse 6 (1).png" alt="Szerencse kerék">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <footer>
-        <button id="felgorgGomb" onclick="scrollToTop()">
-            <svg height="1.2em" id="arrow" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></svg>
-            <p id="felgorgTxt">Back to Top</p>
-        </button>
-    </footer>
-    
+    <main>
+        <div class="container">
+                <button id="spinBtn">Pörgetés</button>
+            <canvas id="wheel" width="400" height="400"></canvas>
+            <aside class="game-list">
+                <ul id="gameList">
+                    <li><label><input type="checkbox" checked value="Hollow Knight"> Hollow Knight</label></li>
+                    <li><label><input type="checkbox" checked value="Team Fortress 2"> Team Fortress 2</label></li>
+                    <li><label><input type="checkbox" checked value="Beat Saber"> Beat Saber</label></li>
+                    <li><label><input type="checkbox" checked value="Terraria"> Terraria</label></li>
+                    <li><label><input type="checkbox" checked value="Titanfall 2"> Titanfall 2</label></li>
+                    <li><label><input type="checkbox" checked value="Resident Evil 4"> Resident Evil 4</label></li>
+                    <li><label><input type="checkbox" checked value="Stardew Valley"> Stardew Valley</label></li>
+                    <li><label><input type="checkbox" checked value="Cult of the Lamb"> Cult of the Lamb</label></li>
+                    <li><label><input type="checkbox" checked value="Balatro"> Balatro</label></li>
+                    <li><label><input type="checkbox" checked value="Cyberpunk 2077"> Cyberpunk 2077</label></li>
+                    <li><label><input type="checkbox" checked value="Minecraft"> Minecraft</label></li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+    <!--Pop-up-->
+    <div id="overlay" class="overlay hidden"></div>
+    <div id="popup-modal" class="popup hidden">
+      <div class="popup-header">
+        <img src="images/Rectangle 76.png" class="party-icon" id="left-icon" alt="party icon">
+        <p id="game-name" class="popup-text">Phasmophobia</p>
+        <img src="images/Rectangle 76.png" class="party-icon" alt="party icon">
+      </div>
+      <div class="popup-buttons">
+        <button id="reject-button">Elvetés</button>
+        <button id="reroll-button">Újra pörgetés</button>
+      </div>
+    </div>
+    <script src="script2.js"></script>
     <script src="UniversalScript.js"></script>
 </body>
 </html>
