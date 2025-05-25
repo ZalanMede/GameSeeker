@@ -73,6 +73,7 @@ body {
     margin: 0 auto;
     margin-bottom: 9%;
     margin-right: 30%;
+    height: 36px;
 }
 
 #filterek label{
@@ -107,7 +108,7 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    width: 26px;
+    width: 35px;
     background-color: #FFCF6B;
     left: 110%;
   }
@@ -136,10 +137,10 @@ body {
   
   /* Style the checkmark/indicator */
   .container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
+    left: 12px;
+    top: 3px;
+    width: 10px;
+    height: 20px;
     border: solid black;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
@@ -286,7 +287,7 @@ body {
   left: 0;
   color: white;
   font-size: 2vw;
-  background: #1CB3C4;
+  background: #FFCF6B;
   height: 20%;
   width: 100%;
 }
@@ -376,7 +377,7 @@ body {
 
 .smallItemBtn{
   border: none;
-  background-color: #1CB3C4;
+  background-color: #FFCF6B;
   color: black;
   font-size: 25px;
   font-family: "Jersey 10", serif;
@@ -569,13 +570,18 @@ body {
         font-size: 20px;
         width: 20%;
         height: 10%;
-        color: black;
+        color: white;
         padding: 0;
         margin: 0 0;
         border: none;
         background: none;
         cursor: pointer;
     }
+
+    .fekete_x{
+      color: black;
+    }
+
     .smallItemBaseCont{
         opacity: 1;
     }
