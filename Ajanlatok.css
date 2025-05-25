@@ -30,7 +30,7 @@ body{
 
 #snap1, #snap2, #snap3{
     position: absolute;
-    top: -5%;
+    top: -50%;
     left: 50%;
 }
 
@@ -82,18 +82,18 @@ ol, li {
     position: relative;
     flex: 0 0 100%;
     width: 100%;
-    background-image: url(/images/enshrouded.jpg);
+    background-image: url(images/enshrouded.jpg);
     background-size: cover;
     counter-increment: item;
 }
 
 .carSlide:first-child{
-    background-image: url(/images/tekken.jpg);
+    background-image: url(images/tekken.jpg);
     background-size: cover;
 }
 
 .carSlide:last-child{
-    background-image: url(/images/witch.jpg);
+    background-image: url(images/witch.jpg);
     background-size: cover;
 }
 
@@ -901,6 +901,18 @@ ol, li {
         width: 4rem;
         height: 3rem;
         border-radius: 15px;
+    }
+
+    .carSlide {
+        background-image: url(images/ajanlatok-5.png);
+    }
+
+    .carSlide:first-child{
+        background-image: url(images/ajanlatok-6.png);
+    }
+
+    .carSlide:last-child{
+        background-image: url(images/ajanlatok-4.png);
     }
 
     #wideSwitchMDSM{
