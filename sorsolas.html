@@ -11,19 +11,18 @@
 
 <body>
     <header>
-<a href="index.html" id="headerLeft"><img src="images/logo.png" alt="GameSeeker Logó"></a>
-
+        <a href="index.html" id="headerLeft"><img src="images/logo.png" alt="GameSeeker Logó"></a>
         <div class="navTarto" onclick="location.href='Osszehasonlitas.html';" style="cursor: pointer;">
-            <a href="Osszehasonlitas.html" class="navGombok">Összehasonlító</a>
-        </div>
-        <div class="navTarto" onclick="location.href='Konyvtar.html';" style="cursor: pointer;">
-            <a href="Konyvtar.html" class="navGombok">Könyvtár</a>
-        </div>
-        <div class="navTarto" onclick="location.href='Kereso.html';" style="cursor: pointer;">
-            <a href="Kereso.html" class="navGombok">Kereső</a>
+             <a href="Osszehasonlitas.html" class="navGombok">Összehasonlító</a>
         </div>
         <div class="navTarto" onclick="location.href='Ajanlatok.html';" style="cursor: pointer;">
             <a href="Ajanlatok.html" class="navGombok">Ajánlatok</a>
+        </div>
+        <div class="navTarto" onclick="location.href='Konyvtar.html';" style="cursor: pointer;">
+             <a href="Konyvtar.html" class="navGombok">Könyvtár</a>
+        </div>
+        <div class="navTarto" onclick="location.href='Kereso.html';" style="cursor: pointer;">
+           <a href="Kereso.html" class="navGombok">Kereső</a>
         </div>
         <div class="navTarto" onclick="location.href='index.html';" style="cursor: pointer;">
             <a href="index.html" class="navGombok">Főoldal</a>
@@ -78,6 +77,12 @@
                     <li><label><input type="checkbox" checked value="Balatro"> Balatro</label></li>
                     <li><label><input type="checkbox" checked value="Cyberpunk 2077"> Cyberpunk 2077</label></li>
                     <li><label><input type="checkbox" checked value="Minecraft"> Minecraft</label></li>
+                    <li><label><input type="checkbox" checked value="MARVEL SNAP"> MARVEL SNAP</label></li>
+                    <li><label><input type="checkbox" checked value="Elden Ring"> Elden Ring</label></li>
+                    <li><label><input type="checkbox" checked value="Hearts of Iron IV"> Hearts of Iron IV</label></li>
+                    <li><label><input type="checkbox" checked value="Lethal Company"> Lethal Company</label></li>
+
+
                 </ul>
             </aside>
         </div>
@@ -85,15 +90,15 @@
     <!--Pop-up-->
     <div id="overlay" class="overlay hidden"></div>
     <div id="popup-modal" class="popup hidden">
-      <div class="popup-header">
-        <img src="images/Rectangle 76.png" class="party-icon" id="left-icon" alt="party icon">
-        <p id="game-name" class="popup-text">Phasmophobia</p>
-        <img src="images/Rectangle 76.png" class="party-icon" alt="party icon">
-      </div>
-      <div class="popup-buttons">
-        <button id="reject-button">Elvetés</button>
-        <button id="reroll-button">Újra pörgetés</button>
-      </div>
+        <div class="popup-header">
+            <img src="images/Rectangle 76.png" class="party-icon" id="left-icon" alt="party icon">
+            <p id="game-name" class="popup-text">Phasmophobia</p>
+            <img src="images/Rectangle 76.png" class="party-icon" alt="party icon">
+        </div>
+        <div class="popup-buttons">
+            <button id="reject-button">Elvetés</button>
+            <button id="reroll-button">Újra pörgetés</button>
+        </div>
     </div>
     <script src="script2.js"></script>
     <script src="UniversalScript.js"></script>
