@@ -220,8 +220,8 @@ body {
     width: 19px;
   }
   .container .checkmark:after {
-    left: 4px;
-    top: -1px;
+    left: 5px;
+    top: 2px;
   }
   #filterek label{
     margin-bottom: 15%;
