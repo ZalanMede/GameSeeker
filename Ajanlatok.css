@@ -903,6 +903,18 @@ ol, li {
         border-radius: 15px;
     }
 
+    .carSlide {
+        background-image: url(images/ajanlatok-5.png);
+    }
+
+    .carSlide:first-child{
+        background-image: url(images/ajanlatok-6.png);
+    }
+
+    .carSlide:last-child{
+        background-image: url(images/ajanlatok-4.png);
+    }
+
     #wideSwitchMDSM{
         flex-direction: column-reverse;
         width: 100%;
