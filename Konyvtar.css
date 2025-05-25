@@ -472,11 +472,14 @@ body {
   .div2{
     width: 95vw;
     gap: 50px;
+    grid-area: 1; 
+    height: 300vh;
   }
 
   #results{
     gap: 5vh 0;
     margin: 10vh 0 0 0;
+    width: 98vw;
   }
 
   .search-bar{
@@ -576,13 +579,18 @@ body {
         font-size: 20px;
         width: 20%;
         height: 10%;
-        color: black;
         padding: 0;
         margin: 0 0;
         border: none;
         background: none;
         cursor: pointer;
+        color: white;
     }
+
+    .fekete_x{
+      color: black;
+    }
+
     .smallItemBaseCont{
         opacity: 1;
     }
@@ -611,8 +619,8 @@ body {
     }
 
     .smallItemCard{ 
-        width: 40vw;
-        min-width: 40vh;
+        width: 90vw;
+        min-width: 90vw;
         height: 98%;
         margin: 0 15px;
         display: flex;
