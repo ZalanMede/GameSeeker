@@ -179,6 +179,7 @@ body{
   }
   .tag-button-link{
     text-decoration: none;
+    color: black;
   }
   .tag-button-link:visited{
     color: black;
@@ -199,6 +200,10 @@ body{
     font-weight: 200;
     font-style: italic;
   }
+  .feherGomb{
+    color: white !important;
+  }
+
 .closeBtnSmall{
     display: none;
 }
@@ -339,6 +344,17 @@ body{
     .smallItemHoverCont p {
     font-size: 0.95rem;
 }
+.smallHoverTextCont{
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  background-color: #090935;
+  border-radius: 6px;
+  flex-direction: column;
+  gap: 0;
+}
+
 }
 @media screen and (max-width: 900px){
     .smallItemBtn{
@@ -370,7 +386,7 @@ body{
         margin: 0;
     }
     .smallItemBtn{
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
 }
 @media screen and (max-width: 576px){
@@ -392,6 +408,12 @@ body{
     .smallItemHoverCont{
         padding: 0;
     }
+    .smallHoverTextCont p{
+      font-size: 4vw;
+  }
+  .smallItemBtn {
+    font-size: 5.5vw;
+  }
 }
   .filter-button:hover {
     background-color: #00b8d4;
