@@ -258,10 +258,10 @@ ol, li {
 
 .smallItemHoverCont {
     position: absolute;
-    top: -5px;
-    left: -0.8vw;
-    right: -0.8vw;
-    bottom: auto;
+    top: -2vh;
+    left: -3vw;
+    right: -3vw;
+    bottom: -2vh;
     background-color: #090935;
     border-radius: 10px;
     padding: 5px;
