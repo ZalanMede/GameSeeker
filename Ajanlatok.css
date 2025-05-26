@@ -873,7 +873,7 @@ ol, li {
         font-size: 30px;
         width: 5%;
         height: 10%;
-        color: black;
+        color: white;
         padding: 0;
         margin: 0 0;
         border: none;
@@ -932,6 +932,10 @@ ol, li {
 
     /* Small Items */
 
+    .feketeX{
+        color: black;
+    }
+
     .smallItemBaseCont{
         opacity: 0;
     }
@@ -946,7 +950,7 @@ ol, li {
         overflow-x: scroll;
         overflow-y: hidden;
         width: 90%;
-        height: 60vh;
+        height: 70vh;
         -ms-overflow-style: none;
         scrollbar-width: none;
         background: #16688D;
