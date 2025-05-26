@@ -11,6 +11,14 @@ body {
   overflow-x: hidden;
   color: #fff;
 }
+h1{
+  color: white;
+  font-size: 4vw;
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+  margin: auto auto;
+  padding: 0;
+}
 .navTarto{
     background-color: #BE2C5D !important;
 }
